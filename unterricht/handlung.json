@@ -1,0 +1,43 @@
+{
+  "intro": {
+    "speaker": "Kapitänin Vera Holm · Nachricht an das Prüfungsteam",
+    "title": "Der Bericht darf so nicht an die Presse.",
+    "paragraphs": [
+      "Die MS Morgenwind liegt vor ihrer nächsten Reise im Hafen. Die neue Werbekampagne läuft bereits. In 40 Minuten soll die Reederei ihren Nachhaltigkeitsbericht vor Journalistinnen und Journalisten vorstellen. Doch drei Verantwortliche haben die Freigabe verweigert: Technik, Reiseplanung und Crewvertretung widersprechen den pauschalen Versprechen.",
+      "Kapitänin Vera Holm hat deshalb die Veröffentlichung gesperrt. Nicht die Rohunterlagen sind geheim: Ihr dürft sie lesen. Gesperrt sind die abschließenden Freigabevermerke der drei Bordakten. Erst nach der fachlichen Prüfung werden sie geöffnet. Die Prüfcodes sind Teil eures Auftrags, kein gehacktes Passwort.",
+      "„Ich brauche ein unabhängiges Prüfungsteam“, erklärt Holm. „Untersucht die Aussagen, hört alle drei Bereiche an und sagt mir, was wir öffentlich vertreten können. Ihr sollt weder unsere Werbung retten noch das Schiff vorschnell verurteilen. Belegt euer Urteil und nennt offen, was ihr noch nicht wisst.“"
+    ]
+  },
+  "bridge": {
+    "speaker": "Kapitänin Vera Holm · Besprechung auf der Brücke",
+    "title": "Aus Befunden wird eine Entscheidung.",
+    "paragraphs": [
+      "„Der Streit lässt sich nicht durch ein Werbeversprechen lösen. Mira fordert wirksame Umweltmaßnahmen, Leon einen tragfähigen Finanzierungsplan und Samira verlässliche Rechte für die Crew. Ihr habt für euren Vorschlag zunächst 30.000 € je Reise. Stellt ein Paket zusammen und begründet, was ihr priorisiert.“",
+      "Die Reederei entscheidet später über die Umsetzung. Euer Auftrag ist eine unabhängige Empfehlung für die Pressekonferenz. Auch eine Ablehnung oder ein vorläufiges Urteil mit offenen Fragen ist zulässig."
+    ]
+  },
+  "crisis": {
+    "speaker": "Leon Brandt · Dringende Funkmeldung",
+    "title": "Der finanzielle Spielraum wird kleiner.",
+    "paragraphs": [
+      "„Ein Reiseveranstalter hat sein Kontingent von 50 Plätzen zurückgegeben. Die Plätze bleiben für diese Modellreise unverkauft. Der Ausfall steht nicht nachweislich mit der Werbung in Verbindung. Unsere bisherigen Kosten bleiben unverändert.“",
+      "Mira: „Die Umweltprobleme verschwinden dadurch nicht.“ Samira: „Unsere Ruhezeiten dürfen nicht zur Restgröße werden.“ Holm wendet sich an euch: „Prüft euren Plan neu. Welche Zusagen haltet ihr aufrecht, und welche Folgen nehmt ihr in Kauf?“"
+    ]
+  },
+  "finale": {
+    "speaker": "Pressekonferenz im Bordsaal",
+    "title": "Jetzt müsst ihr euren Bericht vertreten.",
+    "paragraphs": [
+      "Die Türen öffnen sich. Vorne sitzen Kapitänin Holm und die drei Verantwortlichen; die übrige Klasse übernimmt die Presse. Jedes Team tritt als unabhängiges Prüfungsteam auf und stellt in höchstens einer Minute Urteil, zwei Belege und den wichtigsten Zielkonflikt vor. Bei vielen Teams nennt jedes nur einen neuen Befund.",
+      "Die Presse fragt nach: „Welche Werbeaussage würden Sie streichen? Wer bezahlt Ihre Maßnahmen? Was wissen Sie noch nicht?“ Antwortet mit euren Unterlagen. Danach diskutiert die Klasse die gemeinsame Leitfrage. Es gibt keine vorgegebene richtige Haltung."
+    ]
+  },
+  "ending": {
+    "speaker": "Kapitänin Vera Holm · Abschluss der Anhörung",
+    "title": "Euer Bericht wird zum öffentlichen Prüfauftrag.",
+    "paragraphs": [
+      "„Die ursprüngliche Werbung wird durch eure Untersuchung nicht automatisch bestätigt. Wir halten fest, welche Aussagen belegt sind, welche Bedingungen ihr fordert und wo Nachweise fehlen. Eure Empfehlungen gehen an die Reederei; damit sind die vorgeschlagenen Verbesserungen noch nicht umgesetzt.“",
+      "Die Geschichte endet mit eurem begründeten Urteil. Ob das Versprechen der Morgenwind künftig glaubwürdig ist, hängt davon ab, ob die Reederei nachprüfbar handelt. Nennt zum Abschluss einen Nachweis, den ihr bei einer späteren Kontrolle verlangen würdet."
+    ]
+  }
+}

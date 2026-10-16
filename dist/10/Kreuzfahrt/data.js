@@ -1,0 +1,414 @@
+window.MISSION_DATA = [
+  {
+    "id": "umwelt",
+    "title": "Maschinenraum",
+    "dimension": "Umwelt",
+    "time": "10 Minuten",
+    "lead": "Saubere Luft. Sauberes Klima. Dasselbe?",
+    "scene": "Mira Seidel, technische Leiterin, erwartet euch am Kontrollpult. Sie hat ihre Freigabe für den Werbeentwurf verweigert: „Unsere Technik verbessert einiges. Aber aus weniger Abgasen im Hafen wird noch keine klimaneutrale Reise. Prüft, was wir wirklich behaupten dürfen.“",
+    "material": "<h3>Beleg U1 · Luft ist nicht Klima</h3><p>Schwefeloxide und Feinstaub belasten die Luft und können die Gesundheit schädigen. CO₂ und Methan sind Treibhausgase: Sie tragen zur Erderwärmung bei. Weniger Luftschadstoffe bedeuten daher nicht automatisch Klimaneutralität.</p><h3>Beleg U2 · LNG und Landstrom</h3><p>LNG ist verflüssigtes Erdgas. Bei Förderung, Transport und Nutzung kann Methan entweichen. Deshalb bewertet das Umweltbundesamt fossiles LNG als Klimaschutzlösung kritisch. Ein Schiff mit LNG-Antrieb ist nicht emissionsfrei.</p><p>Landstrom kann im Hafen die Stromerzeugung durch Bordmotoren ersetzen. Dadurch lassen sich lokale Abgase reduzieren. Die Klimawirkung hängt auch davon ab, wie der Strom erzeugt wird. Die Fahrt auf See wird dadurch nicht emissionsfrei.</p><h3>Beleg U3 · Neue Regel, begrenzte Aussage</h3><p>Seit 1. Mai 2025 ist das Mittelmeer ein Schwefel-Emissionskontrollgebiet. Dort gilt grundsätzlich ein Grenzwert von <strong>0,10 % Schwefel im Schiffskraftstoff</strong>; außerhalb solcher Gebiete sind es 0,50 %. Gleichwertige Abgasreinigung ist zulässig. Diese Regel betrifft Schwefelemissionen, nicht sämtliche Treibhausgase.</p><p class=\"source\">Eigenständige Kurzfassung nach IMO (01.05.2025) und Umweltbundesamt (05.08.2025). Geprüft am 15.10.2026. Links unter „Quellen“.</p>",
+    "questions": [
+      {
+        "title": "Welche Werbeaussage hält dem Faktencheck stand?",
+        "options": [
+          [
+            "7",
+            "„LNG macht unsere Kreuzfahrt klimaneutral.“"
+          ],
+          [
+            "3",
+            "„Weniger Schwefelabgase bedeuten nicht automatisch weniger Treibhausgase.“"
+          ],
+          [
+            "9",
+            "„Ohne sichtbaren Rauch gibt es keine Emissionen.“"
+          ]
+        ],
+        "answer": "3",
+        "feedback": "Unterscheidet die Wirkung auf die Luftqualität von der Wirkung auf das Klima. Schaut in U1 und U2."
+      },
+      {
+        "title": "Was kann Landstrom leisten?",
+        "options": [
+          [
+            "1",
+            "Bordmotoren zur Stromerzeugung im Hafen ersetzen; die Stromherkunft bleibt wichtig."
+          ],
+          [
+            "6",
+            "Alle Emissionen der gesamten Reise verhindern."
+          ],
+          [
+            "8",
+            "Nur auf offener See die Motoren ersetzen."
+          ]
+        ],
+        "answer": "1",
+        "feedback": "Landstrom wirkt während des Hafenaufenthalts. Prüft außerdem, woher der Strom stammt (U2)."
+      },
+      {
+        "title": "Welche Aussage zur Mittelmeer-Regel ist richtig?",
+        "options": [
+          [
+            "2",
+            "Seit 2025 ist jede Kreuzfahrt im Mittelmeer CO₂-frei."
+          ],
+          [
+            "5",
+            "Im Mittelmeer gilt weiterhin grundsätzlich derselbe Schwefelgrenzwert wie außerhalb der Kontrollgebiete."
+          ],
+          [
+            "4",
+            "Der strengere Grenzwert begrenzt Schwefelemissionen, beweist aber keine Klimaneutralität."
+          ]
+        ],
+        "answer": "4",
+        "feedback": "U3 nennt 0,10 % gegenüber 0,50 %. Fragt euch: Welcher Stoff wird geregelt?"
+      }
+    ],
+    "note": "Formuliert einen ehrlichen Ersatz für die Werbung „Mit LNG reisen Sie emissionsfrei“. Nennt eine Verbesserung und eine Grenze.",
+    "hints": [
+      "Markiert im Material: Welche Aussagen betreffen den Hafen, welche die ganze Reise? Welche betreffen Luft, welche Klima?",
+      "Prüft absolute Wörter wie „alle“, „emissionsfrei“ und „klimaneutral“. Ein Fortschritt in einem Bereich löst nicht automatisch alle Probleme."
+    ],
+    "extra": "Eine Reederei senkt die Emissionen pro Gast um 10 %, verkauft aber 20 % mehr Reisen gleicher Länge. Was passiert mit den Gesamtemissionen? Rechnet mit dem Ausgangswert 100 und erklärt die Grenze von Effizienz.",
+    "code": "314",
+    "takeaway": "Technische Verbesserungen können Belastungen verringern. Für ein Umwelturteil müssen Luftschadstoffe, Klima und die gesamte Reise getrennt betrachtet werden.",
+    "checkpoint": {
+      "task": "Berechnet aus U3: Um wie viel Prozent ist der Schwefelgrenzwert von 0,50 % auf 0,10 % gesunken? Gemeint ist die relative Senkung, nicht die Differenz in Prozentpunkten.",
+      "answer": "80",
+      "unit": "%",
+      "hint": "Berechnet zuerst die Differenz. Teilt sie durch den alten Grenzwert und multipliziert mit 100.",
+      "hint2": "(0,50 − 0,10) ÷ 0,50 × 100. Die Regel sagt weiterhin nichts über Klimaneutralität aus."
+    },
+    "dossier": {
+      "title": "U4 · Wachstum trifft Effizienz",
+      "intro": "Die Umweltbilanz hängt nicht nur von der Technik eines einzelnen Schiffs ab. Auch die Zahl und Länge der Reisen zählt. Eine Werbeaussage wie „weniger Emissionen pro Gast“ kann stimmen, während die gesamten Emissionen trotzdem zunehmen. Untersucht deshalb stets, ob eine Statistik einen relativen Wert oder eine Gesamtmenge zeigt.",
+      "caption": "Weltweites Passagieraufkommen auf Hochseekreuzfahrten · Millionen",
+      "rows": [
+        [
+          "Jahr",
+          "Millionen Passagiere"
+        ],
+        [
+          "2023",
+          "31,7"
+        ],
+        [
+          "2024",
+          "34,6"
+        ],
+        [
+          "2025",
+          "37,2"
+        ]
+      ],
+      "bars": [
+        [
+          "2023",
+          31.7
+        ],
+        [
+          "2024",
+          34.6
+        ],
+        [
+          "2025",
+          37.2
+        ]
+      ],
+      "source": "CLIA: About Cruise Markets (2023/2024); State of the Cruise Industry, Pressemitteilung vom 15.04.2026 (2025). Gerundete Werte; abgerufen am 15.10.2026. CLIA ist ein Branchenverband, keine unabhängige Umweltorganisation.",
+      "analysis": "Die Zeitreihe zeigt Wachstum. Sie verrät aber weder die Reisedauer noch den Treibstoffverbrauch oder die Emissionen pro Reise. Aus mehr Passagieren allein lässt sich keine genaue zusätzliche CO₂-Menge berechnen. Auch aus effizienteren Schiffen folgt ohne Angaben zur gesamten Flotte keine sinkende Gesamtbelastung.",
+      "task": "Berechnet die absolute Zunahme von 2023 bis 2025. Erklärt anschließend, welche zwei weiteren Angaben ihr braucht, um daraus ein Umwelturteil abzuleiten. Verknüpft eure Antwort mit U1/U2."
+    },
+    "dispatch": {
+      "speaker": "Mira Seidel · Technische Leitung",
+      "title": "Erster Widerspruch geklärt",
+      "text": "„Ihr habt die Umweltversprechen eingegrenzt. Ich habe Verbesserungen beantragt, aber die Geschäftsführung nennt sie zu teuer. Leon im Reedereibüro hat die Kalkulation. Prüft, ob weniger Gewinn wirklich bedeutet, dass wir uns nichts leisten können.“"
+    }
+  },
+  {
+    "id": "wirtschaft",
+    "title": "Reedereibüro",
+    "dimension": "Wirtschaft",
+    "time": "10 Minuten",
+    "lead": "Volles Schiff. Gute Bilanz. Nachhaltig?",
+    "scene": "Leon Brandt, Leiter der Reiseplanung, legt euch zwei Kalkulationen vor. „Ich muss die Reise finanzieren und Rücklagen sichern. Die Werbung nennt nur unseren Umsatz. Mira verlangt Investitionen; die Crew verlässliche Bedingungen. Findet heraus, was tatsächlich übrig bleibt.“",
+    "material": "<h3>Beleg W1 · Die Reiseabrechnung</h3><p><strong>Fiktives, vereinfachtes Rechenmodell.</strong> Keine Zahlen einer realen Reederei. Alle Kosten dieser Reise sind im Modell enthalten.</p><table><caption>Eine Reise der fiktiven MS Morgenwind</caption><thead><tr><th scope=\"col\">Größe</th><th scope=\"col\">Betrag</th></tr></thead><tbody><tr><th scope=\"row\">Zahlende Gäste</th><td>1.000</td></tr><tr><th scope=\"row\">Preis pro Gast</th><td>800 €</td></tr><tr><th scope=\"row\">Gesamtkosten der Reise</th><td>680.000 €</td></tr><tr><th scope=\"row\">Zusätzliche Kosten für bessere Arbeitsbedingungen und Umweltmaßnahmen</th><td>30.000 €</td></tr></tbody></table><h3>Beleg W2 · Zwei verschiedene Größen</h3><p><strong>Umsatz</strong> ist das Geld aus dem Verkauf: Gästezahl × Reisepreis. <strong>Gewinn</strong> ist hier der Umsatz abzüglich aller Kosten. Die geplanten Maßnahmen ändern in diesem Modell weder Gästezahl noch Reisepreis.</p><h3>Beleg W3 · Langfristig wirtschaften</h3><p>Ein Unternehmen muss langfristig zahlungsfähig bleiben, Ressourcen erhalten und investieren können. Hoher Umsatz allein zeigt das nicht. Kosten, die andere tragen, etwa Umweltbelastungen für Hafenanwohner, erscheinen zudem nicht unbedingt vollständig in der Unternehmensrechnung. Mehr Gewinn beweist deshalb weder gute Arbeitsbedingungen noch geringe Umweltbelastung.</p>",
+    "questions": [
+      {
+        "title": "Wie hoch sind Umsatz und Gewinn vor den zusätzlichen Maßnahmen?",
+        "options": [
+          [
+            "4",
+            "800.000 € Umsatz und 120.000 € Gewinn."
+          ],
+          [
+            "1",
+            "800.000 € Umsatz und 680.000 € Gewinn."
+          ],
+          [
+            "7",
+            "120.000 € Umsatz und 800.000 € Gewinn."
+          ]
+        ],
+        "answer": "4",
+        "feedback": "Rechnet zuerst 1.000 × 800 €. Zieht danach die 680.000 € Gesamtkosten ab."
+      },
+      {
+        "title": "Wie hoch ist der Gewinn nach den zusätzlichen Maßnahmen?",
+        "options": [
+          [
+            "9",
+            "150.000 €"
+          ],
+          [
+            "2",
+            "90.000 €"
+          ],
+          [
+            "6",
+            "30.000 €"
+          ]
+        ],
+        "answer": "2",
+        "feedback": "Die Maßnahmen erhöhen die Kosten um 30.000 €. Umsatz und Gästezahl bleiben gleich."
+      },
+      {
+        "title": "Welches Urteil lässt sich aus dem Modell begründen?",
+        "options": [
+          [
+            "3",
+            "Die Maßnahmen sind unmöglich, weil der Gewinn sinkt."
+          ],
+          [
+            "5",
+            "Die Reederei ist nachhaltig, sobald sie Gewinn macht."
+          ],
+          [
+            "8",
+            "Die Maßnahmen sind im Modell finanzierbar. Für ein Nachhaltigkeitsurteil fehlen noch Nachweise zu ihrer Wirkung."
+          ]
+        ],
+        "answer": "8",
+        "feedback": "Ein positiver Restgewinn zeigt hier Finanzierbarkeit. Ob Maßnahmen wirken und langfristig tragfähig sind, steht damit noch nicht fest."
+      }
+    ],
+    "note": "Erklärt den Zielkonflikt zwischen kurzfristigem Gewinn und besseren Umwelt- oder Arbeitsbedingungen. Warum kann sich eine Verbesserung langfristig trotzdem lohnen?",
+    "hints": [
+      "Schreibt zwei Zeilen: Umsatz = Gäste × Preis. Gewinn = Umsatz − Kosten. Die 30.000 € kommen zu den bisherigen Kosten hinzu.",
+      "Vergleicht 120.000 € Gewinn vorher mit dem Ergebnis danach. Weniger Gewinn ist nicht dasselbe wie Verlust."
+    ],
+    "extra": "Wie viele Gäste müssten bei unverändert 800 € Reisepreis mindestens buchen, damit die Kosten einschließlich der Maßnahmen gedeckt sind? Im Modell bleiben alle Kosten konstant. Rundet sinnvoll auf ganze Gäste.",
+    "code": "428",
+    "takeaway": "Umsatz ist nicht Gewinn. Nachhaltiges Wirtschaften braucht langfristige Tragfähigkeit und überprüfbare soziale und ökologische Verbesserungen.",
+    "checkpoint": {
+      "task": "Berechnet aus W1/W2: Um wie viele Euro müsste der Preis je Gast steigen, damit trotz der Maßnahmen der ursprüngliche Gewinn bleibt? Nehmt weiterhin 1.000 zahlende Gäste an.",
+      "answer": "30",
+      "unit": "€ je Gast",
+      "hint": "Verteilt die zusätzlichen Kosten auf die Gäste.",
+      "hint2": "30.000 € ÷ 1.000 Gäste. Prüft anschließend: Würden wirklich alle Gäste zum höheren Preis buchen?"
+    },
+    "dossier": {
+      "title": "W4 · Was bleibt vom Reisepreis?",
+      "intro": "Die Geschäftsführung präsentiert lieber den Umsatz als den Gewinn: 800.000 € klingt beeindruckend. Die folgende Aufteilung zeigt, dass der größte Teil des Reisepreises im Modell für die Durchführung gebraucht wird. Ein Gewinnrückgang ist dennoch kein Verlust. Entscheidend ist auch, ob genügend Geld für künftige Ausgaben und ungeplante Ereignisse bleibt.",
+      "caption": "Fiktive Aufteilung des Reisepreises bei 1.000 Gästen",
+      "rows": [
+        [
+          "Je Gast",
+          "Vor Maßnahmen",
+          "Nach Maßnahmen"
+        ],
+        [
+          "Bisherige Kosten",
+          "680 €",
+          "680 €"
+        ],
+        [
+          "Zusatzmaßnahmen",
+          "0 €",
+          "30 €"
+        ],
+        [
+          "Gewinn",
+          "120 €",
+          "90 €"
+        ],
+        [
+          "Reisepreis",
+          "800 €",
+          "800 €"
+        ]
+      ],
+      "source": "Eigene Berechnung aus W1/W2. Vereinfachtes Unterrichtsmodell, keine realen Branchendurchschnitte.",
+      "analysis": "Vor den Maßnahmen beträgt der Gewinnanteil am Umsatz 15 %. Danach bleiben 11,25 %. Das sind 3,75 Prozentpunkte weniger, während der Gewinn selbst um 25 % sinkt. Prozent und Prozentpunkte beantworten verschiedene Fragen. Belastungen für Anwohner können außerhalb der Rechnung liegen: Ein positiver Gewinn macht sie nicht unschädlich. Umgekehrt können Investitionen heute Kosten erzeugen und erst später Nutzen bringen.",
+      "task": "Prüft die Aussage „Die Maßnahmen verbrauchen 25 % unseres Umsatzes“. Korrigiert sie mithilfe der Tabelle. Nennt einen Umwelt- oder Sozialaspekt, der sich aus dieser Bilanz nicht ablesen lässt."
+    },
+    "dispatch": {
+      "speaker": "Leon Brandt · Reiseplanung",
+      "title": "Geld ist vorhanden, Interessen bleiben",
+      "text": "„Eure Rechnung zeigt: Verbesserungen sind im Modell bezahlbar. Aber welche zuerst? Sprecht mit Samira von der Crewvertretung. Ihre Akte enthält einen Vertragsentwurf und ältere Vergleichsdaten. Bitte verwechselt die historischen Zahlen nicht mit heutigen Löhnen auf unserem Schiff.“"
+    }
+  },
+  {
+    "id": "soziales",
+    "title": "Crewbereich",
+    "dimension": "Soziales",
+    "time": "10 Minuten",
+    "lead": "Urlaub für die einen. Arbeit für die anderen.",
+    "scene": "Samira Yilmaz, gewählte Crewsprecherin, öffnet den Besprechungsraum. „Im Werbeentwurf steht Komfort für alle. Gilt das auch für uns? Hier liegen zwei Verbesserungsangebote und eine historische Lohntabelle als Vergleichsmaterial. Prüft Rechte, Arbeitszeit und die Grenzen dieser Zahlen.“",
+    "material": "<h3>Beleg S1 · Historische Löhne, Stand 2016</h3><p>Das bereitgestellte Unterrichtsmaterial nennt für ausgewählte Tätigkeiten auf „Mein Schiff“ folgende <strong>Gesamtgehälter inklusive Zuschlägen</strong> bei ungefähr 300 Arbeitsstunden im Monat. Die Werte sind historische Beispiele, keine Aussage über heutige Löhne.</p><table><caption>Historischer Ausschnitt aus M9, Materialseite 14</caption><thead><tr><th scope=\"col\">Tätigkeit</th><th scope=\"col\">Gesamtgehalt pro Monat</th></tr></thead><tbody><tr><th scope=\"row\">Buffet-Hilfe</th><td>770 US-Dollar</td></tr><tr><th scope=\"row\">Kabinen-Steward</th><td>1.283 US-Dollar</td></tr></tbody></table><p>Die Zuschläge umfassten laut Material unter anderem Mehrarbeit und den Verzicht auf Urlaub. Individuelle Lebenshaltungskosten und heutige Verträge lassen sich aus der Tabelle nicht ablesen.</p><h3>Beleg S2 · Arbeitszeit verstehen</h3><p>Für die folgende Rechnung nehmen wir einen Monat mit 30 Tagen an. 300 Stunden verteilt auf 30 Tage ergeben einen täglichen Durchschnitt. Diese Rechnung sagt noch nicht, wie einzelne Schichten und freie Tage tatsächlich verteilt waren.</p><h3>Beleg S3 · Zwei fiktive Verbesserungsangebote</h3><p><strong>Angebot A:</strong> Die Reederei wirbt um mehr freiwillige Trinkgelder. Die vertragliche Bezahlung und die Dienstpläne bleiben unverändert.</p><p><strong>Angebot B:</strong> Die Reederei vereinbart verlässlich höhere Grundlöhne, planbare Ruhezeiten und eine unabhängige Beschwerdestelle. Beschäftigte können die Einhaltung prüfen lassen.</p><p class=\"source\">Historische Zahlen: Joachim Herz Stiftung, „Traum oder Albtraum: Kreuzfahrten im Nachhaltigkeits-Check“, M9; dort nach Claus Hecking, Spiegel Online, 01.06.2017, Lohnstand 2016. Angebote A/B sind erfunden.</p>",
+    "questions": [
+      {
+        "title": "Welcher rechnerische Stundenlohn ergibt sich für die Buffet-Hilfe? Rundet auf zwei Nachkommastellen.",
+        "options": [
+          [
+            "8",
+            "25,67 US-Dollar"
+          ],
+          [
+            "2",
+            "2,57 US-Dollar"
+          ],
+          [
+            "4",
+            "0,39 US-Dollar"
+          ]
+        ],
+        "answer": "2",
+        "feedback": "Teilt das Gesamtgehalt von 770 US-Dollar durch 300 Stunden. Verwendet keine Grundgehälter oder Euro-Umrechnung."
+      },
+      {
+        "title": "Wie viele Arbeitsstunden pro Kalendertag ergeben sich im Modell mit 30 Tagen?",
+        "options": [
+          [
+            "5",
+            "10 Stunden im Durchschnitt; die Verteilung der Schichten bleibt unbekannt."
+          ],
+          [
+            "1",
+            "8 Stunden an genau fünf Tagen pro Woche."
+          ],
+          [
+            "3",
+            "30 Stunden pro Tag."
+          ]
+        ],
+        "answer": "5",
+        "feedback": "300 Stunden ÷ 30 Kalendertage. Ein Durchschnitt ist noch kein Dienstplan."
+      },
+      {
+        "title": "Welches Angebot verbessert die soziale Absicherung direkter?",
+        "options": [
+          [
+            "9",
+            "Angebot A, weil freiwillige Trinkgelder ein verlässliches Einkommen garantieren."
+          ],
+          [
+            "6",
+            "Angebot B, weil vertragliche Rechte und überprüfbare Arbeitsbedingungen gestärkt werden."
+          ],
+          [
+            "7",
+            "Beide sind gleich, weil für Beschäftigte nur das Monatsgehalt zählt."
+          ]
+        ],
+        "answer": "6",
+        "feedback": "Prüft, was Beschäftigte verlässlich einfordern können und welche Rolle Erholung und Beschwerdemöglichkeiten spielen."
+      }
+    ],
+    "note": "Begründet, warum für ein Urteil über gute Arbeit ein Stundenlohn allein nicht genügt. Nennt zwei weitere Kriterien und eine Grenze der historischen Tabelle.",
+    "hints": [
+      "Nutzt das Gesamtgehalt von 770 US-Dollar und die 300 Arbeitsstunden. Markiert außerdem das Jahr der Zahlen.",
+      "Vergleicht bei A und B: Ist die Verbesserung freiwillig oder verlässlich? Prüft neben Geld auch Ruhezeiten und Möglichkeiten, Probleme anzusprechen."
+    ],
+    "extra": "Die höhere Bezahlung kann für Beschäftigte aus unterschiedlichen Ländern verschieden attraktiv sein. Warum macht das die Frage nach fairen Arbeitsbedingungen komplexer, aber nicht überflüssig?",
+    "code": "256",
+    "takeaway": "Soziale Nachhaltigkeit umfasst verlässliche Bezahlung, Erholung und Rechte. Historische Einzelbeispiele dürfen nicht ungeprüft auf die Gegenwart übertragen werden.",
+    "checkpoint": {
+      "task": "Berechnet zum Vergleich mit der Buffet-Hilfe den historischen Stundenlohn des Kabinen-Stewards aus S1. Rundet auf zwei Nachkommastellen.",
+      "answer": "4.28",
+      "unit": "US-Dollar je Stunde",
+      "hint": "Nutzt das Gesamtgehalt des Kabinen-Stewards und dieselben 300 Stunden.",
+      "hint2": "1.283 US-Dollar ÷ 300 Stunden. Die Tabelle beschreibt 2016, keine heutigen Branchenlöhne."
+    },
+    "dossier": {
+      "title": "S4 · Mehr Monatslohn, bessere Arbeit?",
+      "intro": "Ein Monatsgehalt lässt sich nur zusammen mit der Arbeitszeit beurteilen. Auch ein höheres Gesamtgehalt kann mit langen Diensten, wenig Erholung oder unsicherer Bezahlung verbunden sein. Die historischen Angaben aus S1 sind ein Ausschnitt für zwei Tätigkeiten. Sie enthalten Zuschläge; sie beschreiben weder alle Arbeitsverträge noch die heutige Situation.",
+      "caption": "Historische Vergleichsdaten · Lohnstand 2016 · keine heutigen Branchenwerte",
+      "rows": [
+        [
+          "Merkmal",
+          "Buffet-Hilfe",
+          "Kabinen-Steward"
+        ],
+        [
+          "Monatsgehalt inkl. Zuschläge",
+          "770 US-Dollar",
+          "1.283 US-Dollar"
+        ],
+        [
+          "Stunden pro Monat, ungefähr",
+          "300",
+          "300"
+        ],
+        [
+          "Stunden pro Kalendertag im 30-Tage-Modell",
+          "10",
+          "10"
+        ]
+      ],
+      "source": "Historische Gehälter und ungefähre Monatsstunden: bereitgestelltes Material M9, Seite 14, Stand 2016. Tagesdurchschnitt: eigene Rechnung. Keine Aussage über die tatsächliche Schichtverteilung.",
+      "analysis": "Der Kabinen-Steward erhält in dieser Tabelle 513 US-Dollar mehr im Monat, also rund 66,6 % mehr als die Buffet-Hilfe. Weil beide Rechnungen mit derselben Stundenanzahl arbeiten, ist auch der rechnerische Stundenlohn entsprechend höher. Ob die Arbeit fair ist, beantwortet dieser Abstand nicht. Dafür wären unter anderem tatsächliche Dienstpläne, vertragliche Ansprüche, Abzüge sowie verlässliche Beschwerdewege zu prüfen. Freiwillige Trinkgelder können schwanken und ersetzen keine zugesicherten Rechte.",
+      "task": "Die Werbeabteilung schreibt: „Bis zu 66,6 % mehr Lohn – unsere Crew arbeitet fair.“ Erklärt zwei Probleme dieser Aussage. Verbindet die historische Tabelle mit den fiktiven Angeboten A und B aus S3."
+    },
+    "dispatch": {
+      "speaker": "Samira Yilmaz · Crewvertretung",
+      "title": "Die Akten ergeben ein gemeinsames Bild",
+      "text": "„Die alte Tabelle beweist nichts über unsere heutigen Löhne. Sie zeigt, welche Fragen ihr stellen müsst. Jetzt habt ihr Befunde aus allen drei Bereichen. Kapitänin Holm erwartet euch auf der Brücke: Ihr sollt einen Plan empfehlen, dessen Kosten und Grenzen offen auf den Tisch kommen.“"
+    }
+  }
+];
+window.MISSION_STORY = {
+  "intro": {
+    "speaker": "Kapitänin Vera Holm · Nachricht an das Prüfungsteam",
+    "title": "Der Bericht darf so nicht an die Presse.",
+    "paragraphs": [
+      "Die MS Morgenwind liegt vor ihrer nächsten Reise im Hafen. Die neue Werbekampagne läuft bereits. In 40 Minuten soll die Reederei ihren Nachhaltigkeitsbericht vor Journalistinnen und Journalisten vorstellen. Doch drei Verantwortliche haben die Freigabe verweigert: Technik, Reiseplanung und Crewvertretung widersprechen den pauschalen Versprechen.",
+      "Kapitänin Vera Holm hat deshalb die Veröffentlichung gesperrt. Nicht die Rohunterlagen sind geheim: Ihr dürft sie lesen. Gesperrt sind die abschließenden Freigabevermerke der drei Bordakten. Erst nach der fachlichen Prüfung werden sie geöffnet. Die Prüfcodes sind Teil eures Auftrags, kein gehacktes Passwort.",
+      "„Ich brauche ein unabhängiges Prüfungsteam“, erklärt Holm. „Untersucht die Aussagen, hört alle drei Bereiche an und sagt mir, was wir öffentlich vertreten können. Ihr sollt weder unsere Werbung retten noch das Schiff vorschnell verurteilen. Belegt euer Urteil und nennt offen, was ihr noch nicht wisst.“"
+    ]
+  },
+  "bridge": {
+    "speaker": "Kapitänin Vera Holm · Besprechung auf der Brücke",
+    "title": "Aus Befunden wird eine Entscheidung.",
+    "paragraphs": [
+      "„Der Streit lässt sich nicht durch ein Werbeversprechen lösen. Mira fordert wirksame Umweltmaßnahmen, Leon einen tragfähigen Finanzierungsplan und Samira verlässliche Rechte für die Crew. Ihr habt für euren Vorschlag zunächst 30.000 € je Reise. Stellt ein Paket zusammen und begründet, was ihr priorisiert.“",
+      "Die Reederei entscheidet später über die Umsetzung. Euer Auftrag ist eine unabhängige Empfehlung für die Pressekonferenz. Auch eine Ablehnung oder ein vorläufiges Urteil mit offenen Fragen ist zulässig."
+    ]
+  },
+  "crisis": {
+    "speaker": "Leon Brandt · Dringende Funkmeldung",
+    "title": "Der finanzielle Spielraum wird kleiner.",
+    "paragraphs": [
+      "„Ein Reiseveranstalter hat sein Kontingent von 50 Plätzen zurückgegeben. Die Plätze bleiben für diese Modellreise unverkauft. Der Ausfall steht nicht nachweislich mit der Werbung in Verbindung. Unsere bisherigen Kosten bleiben unverändert.“",
+      "Mira: „Die Umweltprobleme verschwinden dadurch nicht.“ Samira: „Unsere Ruhezeiten dürfen nicht zur Restgröße werden.“ Holm wendet sich an euch: „Prüft euren Plan neu. Welche Zusagen haltet ihr aufrecht, und welche Folgen nehmt ihr in Kauf?“"
+    ]
+  },
+  "finale": {
+    "speaker": "Pressekonferenz im Bordsaal",
+    "title": "Jetzt müsst ihr euren Bericht vertreten.",
+    "paragraphs": [
+      "Die Türen öffnen sich. Vorne sitzen Kapitänin Holm und die drei Verantwortlichen; die übrige Klasse übernimmt die Presse. Jedes Team tritt als unabhängiges Prüfungsteam auf und stellt in höchstens einer Minute Urteil, zwei Belege und den wichtigsten Zielkonflikt vor. Bei vielen Teams nennt jedes nur einen neuen Befund.",
+      "Die Presse fragt nach: „Welche Werbeaussage würden Sie streichen? Wer bezahlt Ihre Maßnahmen? Was wissen Sie noch nicht?“ Antwortet mit euren Unterlagen. Danach diskutiert die Klasse die gemeinsame Leitfrage. Es gibt keine vorgegebene richtige Haltung."
+    ]
+  },
+  "ending": {
+    "speaker": "Kapitänin Vera Holm · Abschluss der Anhörung",
+    "title": "Euer Bericht wird zum öffentlichen Prüfauftrag.",
+    "paragraphs": [
+      "„Die ursprüngliche Werbung wird durch eure Untersuchung nicht automatisch bestätigt. Wir halten fest, welche Aussagen belegt sind, welche Bedingungen ihr fordert und wo Nachweise fehlen. Eure Empfehlungen gehen an die Reederei; damit sind die vorgeschlagenen Verbesserungen noch nicht umgesetzt.“",
+      "Die Geschichte endet mit eurem begründeten Urteil. Ob das Versprechen der Morgenwind künftig glaubwürdig ist, hängt davon ab, ob die Reederei nachprüfbar handelt. Nennt zum Abschluss einen Nachweis, den ihr bei einer späteren Kontrolle verlangen würdet."
+    ]
+  }
+};

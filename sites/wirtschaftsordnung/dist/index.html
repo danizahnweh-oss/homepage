@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ein interaktiver Lernzirkel für die 11. Klasse: Zentralverwaltungswirtschaft und freie Marktwirtschaft selbstständig vergleichen.">
+  <meta name="theme-color" content="#075c70">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23075c70'/%3E%3Cpath d='M7 9h7v14H7zm11 0h7v14h-7z' fill='%23fff'/%3E%3C/svg%3E">
+  <title>Plan &amp; Markt · Wirtschaftsordnungen verstehen</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="original-tasks.js" defer></script>
+  <script src="photo-sources.js" defer></script>
+  <script src="reading-content.js" defer></script>
+  <script src="solution-gates.js" defer></script>
+  <script src="plan-diagram.js" defer></script>
+  <script src="home.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Zum Lerninhalt</a>
+  <header class="topbar"><a class="brand" href="#start" aria-label="Plan und Markt, Startseite"><span class="brand-mark" aria-hidden="true">▥</span>Plan <span class="amp">&amp;</span> Markt</a><span class="course">Wirtschaft · Klasse 11</span><button class="quiet" id="notebook-button">Meine Vergleichstabelle</button></header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Dein Lernweg"><button class="quiet home-link" id="home-button">Start &amp; Anleitung</button><div class="rail-heading"><h2>Dein Lernweg</h2><span id="progress-text">0 von 5</span></div><progress id="progress" max="5" value="0" aria-label="Abgeschlossene Stationen"></progress><nav id="station-nav" aria-label="Stationen"></nav><div class="rail-note"><strong>Dein Auftrag</strong><p>Vergleiche beide Wirtschaftsordnungen. Halte die Unterschiede in eigenen Worten fest.</p><p class="small">Arbeite in deinem Tempo. Du kannst jederzeit zurückgehen.</p></div><button class="quiet glossary-button" id="glossary-button">Begriffe nachschlagen</button><p id="save-status" class="save-status" role="status">Fortschritt wird auf diesem Gerät gespeichert.</p><button class="text-button" id="reset-button">Lernfortschritt zurücksetzen</button></aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <footer class="site-footer"><span>Zwei Modelle. Ein begründeter Vergleich.</span><button class="text-button" id="sources-button">Quellen &amp; Hinweise</button></footer>
+  <dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="quiet" id="close-dialog" aria-label="Fenster schließen">Schließen</button></div><div id="dialog-body"></div></dialog>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+  <noscript><p class="no-script">Für die interaktiven Aufgaben benötigst du JavaScript. Bitte aktiviere es in deinem Browser.</p></noscript>
+</body>
+</html>
