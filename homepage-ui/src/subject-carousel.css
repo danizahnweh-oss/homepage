@@ -1,0 +1,52 @@
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@source './';
+
+.cf-carousel { --cf-shadow: 0 16px 28px oklch(.2 .01 113 / .16); padding-top: 8px; }
+.cf-frame { overflow: hidden; padding-block: 32px; cursor: grab; border-radius: 12px; }
+.cf-frame:active { cursor: grabbing; }
+.cf-frame:focus-visible { outline-offset: -4px; }
+.cf-stage { position: relative; height: var(--cf-card); transform-style: preserve-3d; user-select: none; }
+.cf-card { position: absolute; left: 50%; top: 0; width: var(--cf-card); aspect-ratio: 1; overflow: hidden; border-radius: 12px; background: var(--factory); color: var(--factory-ink); box-shadow: var(--cf-shadow); transform: translateX(-50%); backface-visibility: hidden; }
+.cf-card:focus-visible { outline: 4px solid var(--accent); outline-offset: -6px; }
+.cf-card:active { /* Preserve the coverflow's inline transform when pressed. */ filter: brightness(.96); }
+.cf-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.cf-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 15%, oklch(.1 .01 113 / .25) 40%, oklch(.1 .01 113 / .94) 100%); pointer-events: none; }
+.cf-card-content { position: absolute; z-index: 1; inset: auto 24px 24px; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
+.cf-class { font-size: 13px; line-height: 1.5; font-weight: 550; color: oklch(.97 .005 113); }
+.cf-card strong { font-size: 28px; line-height: 1.15; font-weight: 650; letter-spacing: -.025em; text-wrap: balance; }
+.cf-card-action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 32px; font-size: 13px; font-weight: 550; color: var(--accent); }
+.cf-toolbar { display: flex; align-items: center; justify-content: center; gap: 24px; max-width: 620px; margin: 4px auto 0; padding-inline: 8px; }
+.cf-arrow { display: grid; place-items: center; flex: none; width: 48px; height: 48px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--canvas); color: var(--ink); cursor: pointer; touch-action: manipulation; }
+.cf-arrow:disabled { opacity: .4; cursor: default; }
+.cf-arrow:focus-visible, .cf-pagination button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.cf-arrow:active { transform: scale(.96); }
+.cf-caption { min-width: 0; flex: 1; text-align: center; }
+.cf-count { display: block; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; line-height: 1.5; }
+.cf-caption p { max-width: 36ch; margin: 4px auto 0; min-height: 48px; font-size: 15px; line-height: 1.6; }
+.cf-pagination { display: flex; justify-content: center; gap: 0; }
+.cf-pagination button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; cursor: pointer; touch-action: manipulation; }
+.cf-pagination button span { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); opacity: .45; }
+.cf-pagination button[aria-current='true'] span { width: 22px; height: 7px; border-radius: 4px; background: var(--focus); opacity: 1; }
+.cf-hint { margin: 0 auto; text-align: center; max-width: 54ch; font-size: 12px; line-height: 1.6; color: var(--muted); }
+@media (hover: hover) and (pointer: fine) { .cf-arrow:not(:disabled):hover { background: var(--accent); border-color: var(--accent); } .cf-card:hover .cf-card-action { text-decoration: underline; text-underline-offset: 4px; } }
+@media (max-width: 600px) {
+  .cf-carousel { --cf-shadow: 0 12px 20px oklch(.2 .01 113 / .15); }
+  .cf-frame { margin-inline: -20px; padding-block: 24px; }
+  .cf-card-content { inset-inline: 20px; bottom: 20px; }
+  .cf-card strong { font-size: 24px; }
+  .cf-toolbar { gap: 12px; padding: 0; }
+  .cf-caption p { font-size: 14px; min-height: 67px; }
+  .cf-hint { max-width: 34ch; }
+}
+@media (max-width: 360px) { .cf-frame { margin-inline: -16px; } }
+@media (prefers-reduced-motion: reduce) { .cf-arrow:active { transform: none; } }
+@media (forced-colors: active) {
+  .cf-card { border: 2px solid CanvasText; }
+  .cf-card::after { background: none; }
+  .cf-card-content { background: Canvas; color: CanvasText; padding: 8px; }
+  .cf-card-action, .cf-class { color: LinkText; }
+  .cf-arrow, .cf-pagination button { border: 1px solid ButtonText; }
+  .cf-pagination button[aria-current='true'] { border: 3px solid Highlight; }
+}

@@ -51,7 +51,16 @@ main { padding-top: var(--space-8); }
 .intro-copy { max-width: 34ch; padding-bottom: 4px; }
 .intro-copy p { font-size: 18px; line-height: 1.65; color: var(--muted); }
 
-/* Primary navigation: subjects and classes are visible before the featured offer. */
+/* Direct subject links remain available even if the React component cannot load. */
+.subject-selection { margin-block: var(--space-6) var(--space-8); }
+.subject-selection > h2 { font-size: 20px; font-weight: 600; letter-spacing: -.02em; }
+.subject-selection:has(.cf-carousel) > h2 { text-align: center; }
+.subject-selection .subject-nav { margin-block: var(--space-3) 0; }
+.subject-selection:has(.cf-carousel) .subject-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 12px; padding: 16px 0 0; border: 0; }
+.subject-selection:has(.cf-carousel) .subject-nav a { min-height: 48px; padding: 8px 12px; border: 0; border-radius: 6px; }
+.subject-selection:has(.cf-carousel) .subject-nav strong { font-size: 13px; font-weight: 600; }
+.subject-selection:has(.cf-carousel) .subject-nav small,
+.subject-selection:has(.cf-carousel) .subject-arrow { display: none; }
 .subject-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-block: var(--space-6) var(--space-8); padding-block: var(--space-2); border-block: 1px solid var(--line); }
 .subject-nav a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 80px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-small); transition: background-color .18s ease-out; }
 .subject-nav a > span:first-child { min-width: 0; }
