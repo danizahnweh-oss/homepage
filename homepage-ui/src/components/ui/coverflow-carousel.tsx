@@ -52,7 +52,7 @@ export function CoverflowCarousel({
   const reduceRef = React.useRef(false);
   const suppressClickRef = React.useRef(false);
   const dragRef = React.useRef<{
-    id: number; x: number; pos: number; v: number; t: number; moved: boolean;
+    id: number; x: number; y: number; pos: number; v: number; t: number; moved: boolean;
   } | null>(null);
   const [selected, setSelected] = React.useState(0);
   const indexAt = React.useCallback((pos: number) => {
@@ -181,12 +181,18 @@ export function CoverflowCarousel({
           rafRef.current = null;
           suppressClickRef.current = false;
           targetRef.current = posRef.current;
-          dragRef.current = { id: event.pointerId, x: event.clientX, pos: posRef.current, v: 0, t: performance.now(), moved: false };
+          dragRef.current = { id: event.pointerId, x: event.clientX, y: event.clientY, pos: posRef.current, v: 0, t: performance.now(), moved: false };
         }}
         onPointerMove={event => {
           const drag = dragRef.current;
           if (!drag || drag.id !== event.pointerId || !widthRef.current) return;
-          if (!drag.moved && Math.abs(event.clientX - drag.x) < 8) return;
+          const deltaX = event.clientX - drag.x;
+          const deltaY = event.clientY - drag.y;
+          if (!drag.moved) {
+            if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 8) return;
+            // Leave an initially vertical gesture to the browser's page scroll.
+            if (Math.abs(deltaY) > Math.abs(deltaX)) { dragRef.current = null; return; }
+          }
           if (!drag.moved) {
             drag.moved = true;
             suppressClickRef.current = true;
@@ -202,8 +208,13 @@ export function CoverflowCarousel({
           paint();
         }}
         onPointerUp={event => endDrag(event)} onPointerCancel={event => endDrag(event, true)}
-        onLostPointerCapture={event => { if (dragRef.current?.id === event.pointerId) endDrag(event, true); }}
-        style={{ perspective: `calc(var(--cf-card) * ${perspective})`, touchAction: 'pan-y' }}>
+        onLostPointerCapture={event => {
+          // Touch implicitly captures the touched link. Moving capture to this
+          // frame fires a bubbling lostpointercapture on that link; ignore it.
+          // Only a loss by the frame itself ends our active gesture.
+          if (event.target === event.currentTarget && dragRef.current?.id === event.pointerId) endDrag(event, true);
+        }}
+        style={{ perspective: `calc(var(--cf-card) * ${perspective})`, touchAction: 'pan-y pinch-zoom' }}>
         <div className="cf-stage">
           {slides.map((slide, index) => (
             <a key={slide.href} ref={node => { cardRefs.current[index] = node; }}

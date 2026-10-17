@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit && vite build"
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run"
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -15,12 +16,15 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.2.1",
+    "@testing-library/react": "16.3.3",
     "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "5.2.0",
+    "jsdom": "29.1.1",
     "tailwindcss": "4.2.1",
     "typescript": "7.0.2",
-    "vite": "7.3.7"
+    "vite": "7.3.7",
+    "vitest": "5.0.5"
   }
 }
