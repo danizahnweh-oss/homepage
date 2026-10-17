@@ -7,8 +7,10 @@ for(const name of ['wirtschaftsordnung','jahrgangsstufentest7','jahrgangsstufent
 }
 execFileSync(process.execPath,['node_modules/vite/bin/vite.js','build','--config','sites/smv/pages/vite.config.mjs'],{stdio:'inherit'});
 await cp('sites/smv/pages-dist','_site/smv',{recursive:true});
-let home=await readFile('_site/index.html','utf8');
-for(const name of ['wirtschaftsordnung','jahrgangsstufentest7','jahrgangsstufentest10','smv']) home=home.replaceAll(`https://${name}.daniel-zahnweh.de`,`/${name}/`);
-await writeFile('_site/index.html',home);
+for(const page of ['index.html','wirtschaft-recht/index.html','deutsch/index.html','englisch/index.html','schulleben/index.html']) {
+ let html=await readFile(`_site/${page}`,'utf8');
+ for(const name of ['wirtschaftsordnung','jahrgangsstufentest7','jahrgangsstufentest10','smv']) html=html.replaceAll(`https://${name}.daniel-zahnweh.de`,`/${name}/`);
+ await writeFile(`_site/${page}`,html);
+}
 await writeFile('_site/.nojekyll','');
 console.log('Alle Hauptseiten und vier Unterangebote wurden zusammengestellt.');

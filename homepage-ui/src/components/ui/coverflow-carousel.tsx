@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const useIsoLayoutEffect = typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
@@ -219,7 +219,7 @@ export function CoverflowCarousel({
               <span className="cf-card-content">
                 <span className="cf-class">{slide.subtitle}</span>
                 <strong>{slide.title}</strong>
-                <span className="cf-card-action">Angebote entdecken <ArrowDown size={18} aria-hidden="true" /></span>
+                <span className="cf-card-action">Angebote öffnen <ArrowRight size={18} aria-hidden="true" /></span>
               </span>
             </a>
           ))}

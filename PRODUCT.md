@@ -8,7 +8,7 @@ product
 Schülerinnen, Schüler und Kollegium greifen im Schulalltag am Handy, Tablet oder Computer auf die bekannten Schulangebote von Daniel Zahnweh zu.
 
 ## Product Purpose
-Öffentliche Startseite unter daniel-zahnweh.de mit hervorgehobenem Einstieg zur Q12-Schokoladenfabrik und direktem Zugang zu Wortreise für Deutsch 5, Wirtschaftsordnung, Jahrgangsstufentest Englisch 7 und 10 sowie SMV-Zimmerbuchung und Vokabelchallenges für Englisch 7, 10 und 11.
+Öffentliche Startseite unter daniel-zahnweh.de mit Coverflow-Fachauswahl. Jeder Bereich öffnet eine eigenständige Seite: `/wirtschaft-recht/`, `/deutsch/`, `/englisch/` und `/schulleben/`. Dort stehen die bisherigen Lernangebote und die SMV-Zimmerbuchung. Die Startseite enthält ausschließlich den Einstieg und die Auswahl.
 
 ## Brand Personality
 Klar, modern, freundlich. Vom Nutzer am 1. Oktober 2026 gewählt.
@@ -17,7 +17,7 @@ Klar, modern, freundlich. Vom Nutzer am 1. Oktober 2026 gewählt.
 Keine Werbeseite, kein überladenes Schulportal, keine erfundenen Statistiken. Keine dekorativen Fotos, die die Auswahl der Angebote verzögern.
 
 ## Design Principles
-- Das gewünschte Angebot in einem Klick erreichen.
+- Den gewünschten Fachbereich in einem Klick als eigene Seite öffnen; dort die Angebote direkt erreichen.
 - Klassenstufe und Fach vor dem Öffnen erkennen.
 - Unterricht und Schulleben unterscheiden.
 - Kurze deutsche Texte und große, eindeutige Linkflächen.

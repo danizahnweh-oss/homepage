@@ -77,7 +77,7 @@ main { padding-top: var(--space-8); }
 .factory-copy { padding: 40px; }
 .course-label { display: block; font-size: 14px; font-weight: 550; line-height: 1.6; }
 .factory-copy .course-label { color: var(--factory-muted); }
-.factory-copy h3 { max-width: 19ch; font-size: 36px; letter-spacing: -.035em; line-height: 1.18; font-weight: 600; margin-block: var(--space-2); }
+.factory-copy :is(h2, h3) { max-width: 19ch; font-size: 36px; letter-spacing: -.035em; line-height: 1.18; font-weight: 600; margin-block: var(--space-2); }
 .factory-copy p { max-width: 40ch; font-size: 16px; line-height: 1.75; color: var(--factory-muted); }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 52px; padding: 14px 20px; border-radius: var(--radius-small); font-size: 16px; font-weight: 650; line-height: 1.5; transition: background-color .18s ease-out, transform .18s ease-out; }
 .primary { background: var(--accent); color: var(--ink); margin-top: var(--space-3); }
@@ -92,21 +92,21 @@ main { padding-top: var(--space-8); }
 .economics-link { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
 .grade-badge { display: grid; place-items: center; width: 64px; height: 64px; background: var(--surface); border-radius: 8px; font-size: 28px; font-weight: 600; letter-spacing: -.03em; transition: background-color .18s ease-out; }
 .economics-description .course-label { color: var(--muted); font-size: 13px; }
-.economics-description h3 { font-size: 21px; line-height: 1.4; font-weight: 600; letter-spacing: -.02em; margin: 4px 0 8px; }
+.economics-description :is(h2, h3) { font-size: 21px; line-height: 1.4; font-weight: 600; letter-spacing: -.02em; margin: 4px 0 8px; }
 .economics-description p { max-width: 66ch; font-size: 15px; line-height: 1.65; color: var(--muted); }
 .row-action { display: flex; align-items: center; gap: var(--space-2); min-height: 48px; font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 5px; }
 .economics-link:hover .row-action { text-decoration-thickness: 2px; }
 .economics-link:hover .grade-badge { background: var(--accent); }
 .german-section, .english-section { margin-top: var(--space-8); }
 .english-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: var(--space-8); padding-top: var(--space-3); }
-.english-intro h3 { font-size: 32px; line-height: 1.2; letter-spacing: -.03em; font-weight: 600; }
+.english-intro :is(h2, h3) { font-size: 32px; line-height: 1.2; letter-spacing: -.03em; font-weight: 600; }
 .english-intro p { font-size: 16px; line-height: 1.75; color: var(--muted); max-width: 34ch; margin-top: 20px; }
 .english-intro .english-note { max-width: 32ch; font-size: 14px; padding-top: var(--space-2); border-top: 1px solid var(--line); }
 .grade-row { padding-block: var(--space-3); border-bottom: 1px solid var(--line); }
 .grade-row:first-child { padding-top: 0; }
 .grade-title { display: flex; align-items: center; gap: 20px; }
 .grade-number { flex: none; width: 48px; font-size: 32px; font-weight: 550; line-height: 1.2; letter-spacing: -.03em; }
-.grade-title h3 { font-size: 20px; font-weight: 650; line-height: 1.4; }
+.grade-title :is(h2, h3) { font-size: 20px; font-weight: 650; line-height: 1.4; }
 .grade-title p { font-size: 14px; line-height: 1.6; color: var(--muted); margin-top: 4px; }
 .grade-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: var(--space-2); padding-left: 68px; }
 .small-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--line); border-radius: var(--radius-small); min-height: 48px; padding: 10px 16px; font-size: 14px; font-weight: 600; line-height: 1.5; }
@@ -136,7 +136,7 @@ main { padding-top: var(--space-8); }
   .subject-nav a { padding-inline: var(--space-2); }
   .subject-nav strong { font-size: 15px; }
   .factory-copy { padding: var(--space-4); }
-  .factory-copy h3 { font-size: 32px; }
+  .factory-copy :is(h2, h3) { font-size: 32px; }
   .english-layout { gap: var(--space-4); }
   .grade-actions { padding-left: 0; }
   .test-training { align-items: flex-start; }
@@ -154,7 +154,7 @@ main { padding-top: var(--space-8); }
   .section-heading { align-items: flex-start; }
   .section-heading > span { max-width: 30ch; text-align: right; }
   .factory-copy { padding: var(--space-3); }
-  .factory-copy h3 { font-size: 28px; }
+  .factory-copy :is(h2, h3) { font-size: 28px; }
   .factory-copy p { font-size: 15px; }
   .visual-caption { inset: auto 16px 16px; font-size: 12px; }
   .economics-link { grid-template-columns: 56px minmax(0, 1fr); gap: 8px 20px; }
@@ -188,18 +188,18 @@ main { padding-top: var(--space-8); }
   .section-heading > span { display: none; }
   .factory-feature { grid-template-columns: 1fr; }
   .factory-copy { padding: var(--space-3); }
-  .factory-copy h3 { max-width: 20ch; font-size: 30px; }
+  .factory-copy :is(h2, h3) { max-width: 20ch; font-size: 30px; }
   .factory-copy p { font-size: 16px; }
   .factory-copy .primary { width: 100%; }
   .factory-visual { aspect-ratio: 1.65; }
   .factory-visual img { height: 100%; }
   .economics-link { grid-template-columns: 48px minmax(0, 1fr); gap: 8px 16px; padding-block: var(--space-3); align-items: start; }
   .grade-badge { width: 48px; height: 48px; font-size: 24px; }
-  .economics-description h3 { font-size: 20px; }
+  .economics-description :is(h2, h3) { font-size: 20px; }
   .german-section, .english-section { margin-top: var(--space-6); }
   .english-layout { padding-top: var(--space-2); gap: var(--space-4); }
   .english-intro { display: block; }
-  .english-intro h3 { font-size: 28px; }
+  .english-intro :is(h2, h3) { font-size: 28px; }
   .english-intro p { margin-top: var(--space-2); max-width: 44ch; }
   .english-intro .english-note { border: 0; padding: 0; margin-top: 8px; max-width: 44ch; }
   .grade-title { gap: var(--space-2); }
@@ -224,7 +224,7 @@ main { padding-top: var(--space-8); }
   .subject-nav a { gap: 8px; padding-inline: 8px; }
   .subject-nav strong { font-size: 13px; }
   .subject-nav small { font-size: 12px; }
-  .factory-copy h3 { font-size: 26px; }
+  .factory-copy :is(h2, h3) { font-size: 26px; }
   .grade-actions { padding-left: 0; }
 }
 @media (hover: none) { .factory-visual:hover img { transform: none; } }
@@ -240,4 +240,28 @@ main { padding-top: var(--space-8); }
   .visual-caption { background: Canvas; }
   .factory-visual img { forced-color-adjust: none; }
   .subject-arrow { color: LinkText; }
+}
+
+/* Dedicated subject pages share the homepage's visual system. */
+.subject-page { min-height: 100dvh; display: flex; flex-direction: column; }
+.subject-page main { flex: 1; padding-top: 24px; }
+.subject-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.subject-tabs a { display: flex; align-items: center; min-height: 48px; padding: 12px 16px; border-radius: 6px; font-size: 14px; line-height: 1.5; font-weight: 600; }
+.subject-tabs a[aria-current="page"] { background: var(--accent); color: var(--ink); }
+.subject-tabs a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.subject-page-intro { padding-block: 40px 32px; }
+.subject-page-intro h1 { margin-block: 8px 16px; font-size: 48px; line-height: 1.15; letter-spacing: -.035em; font-weight: 650; }
+.subject-page-intro > p { max-width: 62ch; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.subject-page-intro .subject-page-grade { font-size: 14px; font-weight: 600; }
+.subject-page .german-section, .subject-page .english-section, .subject-page .school-section { margin-top: 0; }
+.subject-page .english-layout { padding-top: 0; }
+.subject-page .german-section .economics-link { border-top: 1px solid var(--line); }
+@media (max-width: 600px) {
+  .subject-page main { padding-top: 16px; }
+  .subject-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-bottom: 16px; }
+  .subject-tabs a { padding-inline: 12px; font-size: 13px; }
+  .subject-page-intro { padding-block: 32px 24px; }
+  .subject-page-intro h1 { font-size: 36px; }
+  .subject-page-intro > p { font-size: 16px; }
+  .subject-page .header-link { font-size: 13px; }
 }
