@@ -3,27 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#c5d96b">
+  <meta name="theme-color" content="#f7f9fb">
   <title>Daniel Zahnweh · Schule & Lernen</title>
   <meta name="description" content="Dein Einstieg in den Unterricht: Wortreise für Deutsch 5, Q12-Schokoladenfabrik, Wirtschaftsordnung, Englisch-Vokabeln und Jahrgangsstufentests sowie die SMV-Zimmerbuchung.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c5d96b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='29' font-weight='700' fill='%23232620'%3Edz%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="homepage.css">
-  <link rel="stylesheet" href="/subject-carousel/subject-carousel.css?v=touch-20261017">
-  <script type="module" src="/subject-carousel/subject-carousel.js?v=touch-20261017"></script>
+  <link rel="stylesheet" href="/home-fan.css?v=20261017">
+  <link rel="stylesheet" href="/subject-carousel/subject-carousel.css?v=fan-20261017">
+  <script type="module" src="/subject-carousel/subject-carousel.js?v=fan-20261017"></script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#angebote">Direkt zu den Lernangeboten</a>
   <header class="site-header wrap">
     <a class="identity" href="/" aria-label="Daniel Zahnweh: Startseite"><span class="monogram" aria-hidden="true">dz</span><span><strong>Daniel Zahnweh</strong><small>Schule & Lernen</small></span></a>
-    <a class="header-link" href="#fachwahl">Lernangebote <span aria-hidden="true">↓</span></a>
+    <nav class="home-header-nav" aria-label="Hauptnavigation"><a class="header-link" href="#fachwahl">Lernangebote</a><a class="header-link header-outlined" href="/schulleben/">Schulleben</a></nav>
   </header>
   <main class="wrap" id="angebote" tabindex="-1">
     <section class="intro" aria-labelledby="intro-title">
-      <h1 id="intro-title">Dein Unterricht.<br><span>Dein nächster Schritt.</span></h1>
-      <div class="intro-copy"><p>Ein Fall zum Lösen, Wörter zum Lernen oder Platz für eure Ideen. Hier findest du dein Angebot.</p></div>
+      <h1 id="intro-title">Hallo, schön, dass du da bist!</h1>
+      <div class="intro-copy"><p>Dein Einstieg in den Unterricht. Wähle ein Angebot und entdecke deine nächste Lernwelt.</p></div>
+      <a class="home-feature" href="/Q12/Fabrik/"><span><strong>Die Schokoladenfabrik entdecken</strong><small>Wirtschaft &amp; Recht · Q12 · Escape Game</small></span><span aria-hidden="true">→</span></a>
+      <nav class="home-shortcuts" aria-label="Schnellzugriff"><a class="home-primary" href="/englisch/">Englisch üben</a><a href="/deutsch/">Wortreise öffnen</a><a href="/schulleben/">SMV-Zimmer buchen</a></nav>
     </section>
     <section class="subject-selection" id="fachwahl" aria-labelledby="subject-selection-title" tabindex="-1">
-    <h2 id="subject-selection-title">Womit möchtest du starten?</h2>
+    <h2 id="subject-selection-title">Deine Lernangebote</h2>
     <div id="subject-carousel-root"></div>
     <nav class="subject-nav" aria-label="Direkt zu den Lernbereichen">
       <a href="/wirtschaft-recht/"><span><strong>Wirtschaft &amp; Recht</strong><small>Klasse 10, 11 &amp; Q12</small></span><span class="subject-arrow" aria-hidden="true">→</span></a>

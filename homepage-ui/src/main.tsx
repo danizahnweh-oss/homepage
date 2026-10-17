@@ -8,6 +8,7 @@ const slides: CoverflowSlide[] = [
   { src: '/assets/subjects/books.jpg', alt: 'Ein Regal voller Bücher.', title: 'Deutsch', subtitle: 'Klasse 5', href: '/deutsch/', description: 'Geschichten lesen. Sprache entdecken.' },
   { src: '/assets/subjects/london.jpg', alt: 'Die Tower Bridge und die Themse in London.', title: 'Englisch', subtitle: 'Klasse 7, 10 & 11', href: '/englisch/', description: 'Wörter lernen. Dein Wissen spielerisch überprüfen.' },
   { src: '/assets/subjects/school.jpg', alt: 'Bücher und Buntstifte auf einem Schreibtisch.', title: 'Schulleben', subtitle: 'SMV-Zimmer buchen', href: '/schulleben/', description: 'Freie Termine finden. Platz für eure Ideen.' },
+  { src: '/10/Kreuzfahrt/assets/sonnendeck.webp', alt: 'Sonnendeck des Kreuzfahrtschiffs mit Pool und Meerblick.', title: 'Mission Traumschiff', subtitle: 'Wirtschaft & Recht · Klasse 10', href: '/10/Kreuzfahrt/', description: 'Drei Bordakten. Ein eigenes Urteil zur Nachhaltigkeit.' },
 ];
 
 class SelectionBoundary extends React.Component<{children: React.ReactNode}, {failed: boolean}> {
@@ -28,5 +29,5 @@ const redirectOldSection = () => {
 window.addEventListener('hashchange', redirectOldSection);
 if (!redirectOldSection()) {
   const container = document.getElementById('subject-carousel-root');
-  if (container) createRoot(container).render(<SelectionBoundary><CoverflowCarousel slides={slides} /></SelectionBoundary>);
+  if (container) createRoot(container).render(<SelectionBoundary><CoverflowCarousel slides={slides} showPagination={false} /></SelectionBoundary>);
 }

@@ -37,7 +37,7 @@ export interface CoverflowCarouselProps {
  * time-based settling, cancellation, and an instant reduced-motion path. */
 export function CoverflowCarousel({
   slides, rotate = 38, depth = .42, perspective = 3,
-  falloff = .56, fade = .12, cardWidth = 'clamp(176px, 40vw, 320px)',
+  falloff = .56, fade = .12, cardWidth = 'clamp(164px, 23vw, 256px)',
   gap = -.06, loop = true, showCaption = true,
   showPagination = true, showNavigation = true,
   label = 'Fachbereich auswählen', className, cardClassName,
@@ -64,7 +64,6 @@ export function CoverflowCarousel({
   const paint = React.useCallback(() => {
     const width = widthRef.current;
     if (!width || !count) return;
-    const pitch = width * (1 + gap);
     cardRefs.current.forEach((card, index) => {
       if (!card || index >= count) return;
       let offset = index - posRef.current;
@@ -73,11 +72,13 @@ export function CoverflowCarousel({
         if (offset > count / 2) offset -= count;
       }
       const distance = Math.abs(offset);
-      const ramp = Math.pow(distance, falloff);
-      const tilt = Math.min(rotate * ramp, 82) * Math.sign(offset);
-      card.style.transform = `translateX(calc(-50% + ${offset * pitch}px)) translateZ(${-depth * width * ramp}px) rotateY(${-tilt}deg)`;
-      const edge = loop ? Math.min(1, Math.max(0, count / 2 - distance)) : 1;
-      card.style.opacity = String(Math.max(0, 1 - fade * distance) * edge);
+      // A flat fan keeps the photography readable, with the selected card upright.
+      const spread = widthRef.current < 200 ? .37 : .73;
+      const scale = Math.max(.78, 1 - .055 * distance);
+      const y = width * .055 * distance * distance;
+      card.style.transform = `translateX(calc(-50% + ${offset * width * spread}px)) translateY(${y}px) rotate(${offset * 10}deg) scale(${scale})`;
+      const edge = loop ? Math.min(1, Math.max(0, count / 2 + .5 - distance)) : 1;
+      card.style.opacity = String(edge);
       card.style.zIndex = String(count + 1 - Math.round(distance));
       card.style.pointerEvents = edge < .1 ? 'none' : 'auto';
     });
@@ -214,7 +215,7 @@ export function CoverflowCarousel({
           // Only a loss by the frame itself ends our active gesture.
           if (event.target === event.currentTarget && dragRef.current?.id === event.pointerId) endDrag(event, true);
         }}
-        style={{ perspective: `calc(var(--cf-card) * ${perspective})`, touchAction: 'pan-y pinch-zoom' }}>
+        style={{ touchAction: 'pan-y pinch-zoom' }}>
         <div className="cf-stage">
           {slides.map((slide, index) => (
             <a key={slide.href} ref={node => { cardRefs.current[index] = node; }}
@@ -244,7 +245,7 @@ export function CoverflowCarousel({
       </div>
       <div className="cf-toolbar">
         <div className="cf-caption" aria-live="polite" aria-atomic="true">
-          {showCaption && <><span className="cf-count">{selected + 1} / {count}</span><p>{active.description}</p></>}
+          {showCaption && <><span className="cf-count">{active.title} · {selected + 1} von {count}</span><p>{active.description}</p></>}
         </div>
       </div>
       {showPagination && <div className="cf-pagination" role="group" aria-label="Fachbereich direkt auswählen">
