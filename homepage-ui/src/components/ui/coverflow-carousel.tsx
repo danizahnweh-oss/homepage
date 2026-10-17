@@ -37,7 +37,7 @@ export interface CoverflowCarouselProps {
  * time-based settling, cancellation, and an instant reduced-motion path. */
 export function CoverflowCarousel({
   slides, rotate = 38, depth = .42, perspective = 3,
-  falloff = .56, fade = .12, cardWidth = 'clamp(220px, 30vw, 320px)',
+  falloff = .56, fade = .12, cardWidth = 'clamp(176px, 40vw, 320px)',
   gap = -.06, loop = true, showCaption = true,
   showPagination = true, showNavigation = true,
   label = 'Fachbereich auswählen', className, cardClassName,
@@ -163,6 +163,9 @@ export function CoverflowCarousel({
     <div className={cn('cf-carousel w-full', className)}
       style={{ '--cf-card': cardWidth } as React.CSSProperties}
       role="region" aria-roledescription="Karussell" aria-label={label}>
+      <div className={cn('cf-gallery', showNavigation && 'cf-gallery-navigation')}>
+        {showNavigation && <button type="button" className="cf-arrow" aria-label="Vorherigen Fachbereich auswählen"
+          disabled={count < 2 || (!loop && selected === 0)} onClick={event => nudge(-1, event.detail === 0)}><ChevronLeft size={22} aria-hidden="true" /></button>}
       <div className="cf-frame" ref={frameRef} tabIndex={0}
         aria-label="Fachauswahl. Mit den Pfeiltasten blättern, mit Tab zum ausgewählten Fach."
         onKeyDown={event => {
@@ -225,14 +228,13 @@ export function CoverflowCarousel({
           ))}
         </div>
       </div>
+        {showNavigation && <button type="button" className="cf-arrow" aria-label="Nächsten Fachbereich auswählen"
+          disabled={count < 2 || (!loop && selected === count - 1)} onClick={event => nudge(1, event.detail === 0)}><ChevronRight size={22} aria-hidden="true" /></button>}
+      </div>
       <div className="cf-toolbar">
-        {showNavigation && <button type="button" className="cf-arrow" aria-label="Vorherigen Fachbereich auswählen"
-          disabled={count < 2 || (!loop && selected === 0)} onClick={event => nudge(-1, event.detail === 0)}><ChevronLeft size={22} aria-hidden="true" /></button>}
         <div className="cf-caption" aria-live="polite" aria-atomic="true">
           {showCaption && <><span className="cf-count">{selected + 1} / {count}</span><p>{active.description}</p></>}
         </div>
-        {showNavigation && <button type="button" className="cf-arrow" aria-label="Nächsten Fachbereich auswählen"
-          disabled={count < 2 || (!loop && selected === count - 1)} onClick={event => nudge(1, event.detail === 0)}><ChevronRight size={22} aria-hidden="true" /></button>}
       </div>
       {showPagination && <div className="cf-pagination" role="group" aria-label="Fachbereich direkt auswählen">
         {slides.map((slide, index) => <button type="button" key={slide.href}

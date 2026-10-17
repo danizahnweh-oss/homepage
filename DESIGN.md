@@ -21,3 +21,5 @@ Die Einstiegswerbung steht vor der Schiffsmission: sonniges Pooldeck, Türkis/Ko
 
 
 Eigenständige Fachseiten, 17. Oktober 2026: normale, direkt aufrufbare HTML-Seiten. Relative Bild- und CSS-Pfade wurden für Unterseiten angepasst. Die Karten öffnen Seiten statt Scrollziele; alte Startseitenlinks mit #wirtschaft, #deutsch, #englisch oder #schulleben werden bei geladenem JavaScript auf die jeweilige neue Seite weitergeleitet. Die React-Komponente wird nur auf der Startseite geladen.
+
+Die Blätterpfeile stehen links und rechts neben der Bildfläche, vertikal in der Kartenmitte. Eigene 48px-Spalten halten die Pfeile auch auf dem Handy von den Karten getrennt. Beschreibung und Seitenpunkte bleiben unter den Bildern.

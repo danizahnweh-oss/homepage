@@ -4,6 +4,8 @@
 @source './';
 
 .cf-carousel { --cf-shadow: 0 16px 28px oklch(.2 .01 113 / .16); padding-top: 8px; }
+.cf-gallery { max-width: 1008px; margin-inline: auto; }
+.cf-gallery-navigation { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 16px; }
 .cf-frame { overflow: hidden; padding-block: 32px; cursor: grab; border-radius: 12px; }
 .cf-frame:active { cursor: grabbing; }
 .cf-frame:focus-visible { outline-offset: -4px; }
@@ -33,14 +35,15 @@
 @media (hover: hover) and (pointer: fine) { .cf-arrow:not(:disabled):hover { background: var(--accent); border-color: var(--accent); } .cf-card:hover .cf-card-action { text-decoration: underline; text-underline-offset: 4px; } }
 @media (max-width: 600px) {
   .cf-carousel { --cf-shadow: 0 12px 20px oklch(.2 .01 113 / .15); }
-  .cf-frame { margin-inline: -20px; padding-block: 24px; }
-  .cf-card-content { inset-inline: 20px; bottom: 20px; }
-  .cf-card strong { font-size: 24px; }
+  .cf-gallery-navigation { gap: 8px; }
+  .cf-frame { padding-block: 24px; }
+  .cf-card-content { inset-inline: 16px; bottom: 16px; }
+  .cf-card strong { font-size: 20px; }
+  .cf-class, .cf-card-action { font-size: 12px; }
   .cf-toolbar { gap: 12px; padding: 0; }
   .cf-caption p { font-size: 14px; min-height: 67px; }
   .cf-hint { max-width: 34ch; }
 }
-@media (max-width: 360px) { .cf-frame { margin-inline: -16px; } }
 @media (prefers-reduced-motion: reduce) { .cf-arrow:active { transform: none; } }
 @media (forced-colors: active) {
   .cf-card { border: 2px solid CanvasText; }
