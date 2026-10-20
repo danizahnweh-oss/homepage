@@ -16,3 +16,5 @@
 .language-help summary{font-weight:700;cursor:pointer;min-height:44px}.language-help[open] summary{margin-bottom:12px}
 @media(max-width:600px){.fips-heading{align-items:flex-start}.language-tools{width:100%}.language-tools select{width:100%}.language-help{padding:16px}}
 @media print{.language-tools{display:none}}
+
+.language-audio{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}.language-audio .language-audio-label{font-weight:600;font-size:.88rem;margin-bottom:8px}.language-audio audio{display:block;width:100%;max-width:440px;height:54px}.language-audio .notice{font-size:.8rem;margin:8px 0 0}.language-audio [data-language-audio-error]:empty{display:none}@media print{.language-audio{display:none}}

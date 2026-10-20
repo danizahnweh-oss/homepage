@@ -1,0 +1,510 @@
+{
+  "description": "Pre-generated AI narration of the matching language help. No visitor input is sent to a speech provider.",
+  "generator": "edge-tts",
+  "recordings": [
+    {
+      "id": "nomen",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "89e31936cbdca00c5100bd03a35d79a33faf28807e5a49470b590563d6a15453",
+      "duration_seconds": 28.15
+    },
+    {
+      "id": "nomen",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "c8c14013f1680275dddf8423d81dc4687c41338e861f6d55b1ed896eac07ed6e",
+      "duration_seconds": 29.16
+    },
+    {
+      "id": "nomen",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "b3d85dcbe16a2053ace648604e06da3795256f533c9aa09301a86be1a2101bf9",
+      "duration_seconds": 32.28
+    },
+    {
+      "id": "nomen",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "45f79e5c6c2b8d70e562374c9e9169b7252e3443b680f16179e893f275250693",
+      "duration_seconds": 30.05
+    },
+    {
+      "id": "plural",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "f3aaa7d32a0f245f1c89550cb395aaa96c9db79cfc6ee674df1a1e6121efee69",
+      "duration_seconds": 25.01
+    },
+    {
+      "id": "plural",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "aae06c8148b08ddc63cd81a71cd198324e81796fc7d41feb71ee1bfc0dce7f1e",
+      "duration_seconds": 26.95
+    },
+    {
+      "id": "plural",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "e3664debc0205e2dbebcf93b8ebc4ebc1b14212040ac670ce860c8d4e533200d",
+      "duration_seconds": 30.48
+    },
+    {
+      "id": "plural",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "ba1f08eaa958cffff49e88d24ea4041c71c8c08cf7d301a1b6bc19797a8d5783",
+      "duration_seconds": 26.26
+    },
+    {
+      "id": "verben",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "3e1fffafdf84df6e9f5095629bd6f926c6f0d60af7618fb3c7e97e801159f7f7",
+      "duration_seconds": 29.93
+    },
+    {
+      "id": "verben",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "d5027a926d53633c0f73b84c61cf8dcd80f85e1a044bd7fa10ec73d00822bc28",
+      "duration_seconds": 31.13
+    },
+    {
+      "id": "verben",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "0910878a98b267bfedda9e9e02a4699a38afddae654c096e94988f1471639b54",
+      "duration_seconds": 36.74
+    },
+    {
+      "id": "verben",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "3576297dcb55559ccffada2a4bef6e86c68b9ee43491284fc90fee98b80fe4f7",
+      "duration_seconds": 24.6
+    },
+    {
+      "id": "adjektive",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "a53520de8381a78c5501228a22af28ad475ffd03a96aa98da787a25888ff7ec3",
+      "duration_seconds": 27.67
+    },
+    {
+      "id": "adjektive",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "d1285ab3028a87974c36e982d919bbcb881a654bf290bb34bb67138638e0828a",
+      "duration_seconds": 30.82
+    },
+    {
+      "id": "adjektive",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "5aa5c8fe4358f8db734b4e0b87d271f14d14e6e3488b421bf9d47b93226b8533",
+      "duration_seconds": 39.17
+    },
+    {
+      "id": "adjektive",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "9897f5b93fc657b95c50f790c7564b68a611a87ed68f011a0c3385bc138f7c65",
+      "duration_seconds": 30.29
+    },
+    {
+      "id": "pronomen",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "4b0a4c4b2916052aa1eeee06fba2406c879be038fd897b566d7f2142966368af",
+      "duration_seconds": 34.97
+    },
+    {
+      "id": "pronomen",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "124d703d7bc9d8e82c3c747a12b0270813d38de6fb8296bba2e53f9c4757f2c7",
+      "duration_seconds": 36.31
+    },
+    {
+      "id": "pronomen",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "32720f9697960cb82dabc652e3ace434c312c7018c4a6a8c560203df5192db13",
+      "duration_seconds": 40.42
+    },
+    {
+      "id": "pronomen",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "16a1e5dd2a1a7f98f6c70c966f20fb27b6b27c825853cb64d4b480767267d0be",
+      "duration_seconds": 39.34
+    },
+    {
+      "id": "faelle",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "42fb96ecde4045cda546273ac6f59c60d54caf2f555c5ec594a6e844e0555b97",
+      "duration_seconds": 34.27
+    },
+    {
+      "id": "faelle",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "bb84c84ea48073ec6cc7ee6e8291e998c01450c92ac9cb127f3eea3c1be35567",
+      "duration_seconds": 35.83
+    },
+    {
+      "id": "faelle",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "d6085df6b38f1534c0300b49b243d24fe6b5614fadc8539bf1a161e77c50fb16",
+      "duration_seconds": 46.51
+    },
+    {
+      "id": "faelle",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "01c7bf12025af17934c7f895cd2d24c43554963c2d4fe484c827a492898449ab",
+      "duration_seconds": 36.67
+    },
+    {
+      "id": "satzglieder",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "1a0bb0ace507eec1b0e50ebdf02dbd51f519088326b7eee6b84860fb83d01b3d",
+      "duration_seconds": 32.74
+    },
+    {
+      "id": "satzglieder",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "6b729f0ba3cf86f865c2f2fcf3df4fa9de340d442480fd424866d7adc02cfe84",
+      "duration_seconds": 34.42
+    },
+    {
+      "id": "satzglieder",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "c61666adf85d86aa63d9c4ed42651341fb98b6a9d073af27dbd0ebff298cc5a4",
+      "duration_seconds": 40.82
+    },
+    {
+      "id": "satzglieder",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "ec4a42d9aa90d99e778e21ac6dd108ede9a9ce773cbc2f937a77754bb333bd30",
+      "duration_seconds": 36.19
+    },
+    {
+      "id": "zeiten",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "332a813067b304131956a6a36b56f9082e7d4448a68b9a4f24985927a037b9b5",
+      "duration_seconds": 38.95
+    },
+    {
+      "id": "zeiten",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "9c791a2154c09ef977a68e7013395ac847f8795847287dd9589e5cab437e660c",
+      "duration_seconds": 38.9
+    },
+    {
+      "id": "zeiten",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "7182ff0e5a8586b14355d2ff1b8a8de63c40aa985eb6d0338fb288e528a8b824",
+      "duration_seconds": 43.03
+    },
+    {
+      "id": "zeiten",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "dbb05539943eaa9bc619873c95b7a169f26b34aef776adcc3744afc295803ffc",
+      "duration_seconds": 37.78
+    },
+    {
+      "id": "praepositionen",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "77c8a88be8867f77090ce860cd12846d3ef9325d3d7355a353aaffa5b5be691d",
+      "duration_seconds": 38.86
+    },
+    {
+      "id": "praepositionen",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "a0a14a2ede9e753abf5d54035e0195220d61fdd9778c3833a9c64d13be33d1e3",
+      "duration_seconds": 38.18
+    },
+    {
+      "id": "praepositionen",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "f4f1492ed6f76c9573882dc093c9d9a8e989f5371e8b7fd956ac07dfec27d509",
+      "duration_seconds": 44.02
+    },
+    {
+      "id": "praepositionen",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "5ebe3e77fd51d162073153a158ed21a0d89f2d27619bdc738fd3c2dcabcac51e",
+      "duration_seconds": 41.5
+    },
+    {
+      "id": "saetze",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "8f455132848a12bf41e97769f1903745557f9f56e38b185dc504e074993580bc",
+      "duration_seconds": 31.61
+    },
+    {
+      "id": "saetze",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "561b01586f1671fa4c2965b3dd6a0584c74bbf42c0552f067853485eff3ebab7",
+      "duration_seconds": 28.94
+    },
+    {
+      "id": "saetze",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "35e94d6c261fe34f9efa2e52ecac1fa62985676bee70c72a7154e01cc3e4f375",
+      "duration_seconds": 35.06
+    },
+    {
+      "id": "saetze",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "06e01c0a1d6f3653714bbb6e19191d39b90c3284b79cecaaa9f8fe6bfd64d61e",
+      "duration_seconds": 33.22
+    },
+    {
+      "id": "gross",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "3e81b25e3875831698e356e7646264bfabf196117b1fa9a31d56a42adb906d30",
+      "duration_seconds": 29.9
+    },
+    {
+      "id": "gross",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "0b286737144d60ebad6cad2c796a51f9a8c02688d6b934e03bd87060d3baf3ff",
+      "duration_seconds": 32.78
+    },
+    {
+      "id": "gross",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "78a0bf6a0cb982855e4df26a28c0007355e791e3467ac5110c010c032a58d677",
+      "duration_seconds": 37.46
+    },
+    {
+      "id": "gross",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "acab33875f41725c835f0c1bf0944eb40bac9b107020f69089c6083e12ab2610",
+      "duration_seconds": 32.33
+    },
+    {
+      "id": "verbindungen",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "2dafcf794492f8246442eb096840fe7909f909e4496ea9c04bc33b4ea7ebd076",
+      "duration_seconds": 33.24
+    },
+    {
+      "id": "verbindungen",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "c0824a53ce2486a0b9b133e130948ece3732597b665de02831dc39a935eff5fe",
+      "duration_seconds": 34.25
+    },
+    {
+      "id": "verbindungen",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "dd547ca330537422142996906319531c9dbdbb6090820cdbd3a584f16bcc16cf",
+      "duration_seconds": 38.69
+    },
+    {
+      "id": "verbindungen",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "bc0141fbb2a97a90cbd16dcf36879f38ab07ec51c24158ddc8463d16ebe8617e",
+      "duration_seconds": 35.33
+    },
+    {
+      "id": "lesen-schluessel",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "f50e5a1824a184d15daaf6125e0bb4d4003b4dd11ca6098c823643d986acd53c",
+      "duration_seconds": 14.88
+    },
+    {
+      "id": "lesen-schluessel",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "727ad04613b520db3db1a540ed27d0e3c2d111d5c26c30a2f30433ceb48c871a",
+      "duration_seconds": 15.34
+    },
+    {
+      "id": "lesen-schluessel",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "f82b68d3358f1f0225e70662a410e50d91bd576e2d7face52bbd813cba0124b9",
+      "duration_seconds": 20.09
+    },
+    {
+      "id": "lesen-schluessel",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "152aa3fc1572be59740be5ef5ca481ef23790fe9796dc80aa502fd7cd9e496f9",
+      "duration_seconds": 16.82
+    },
+    {
+      "id": "lesen-buecherbus",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "a8386079bec8a217ecd9030c0517b8352ea00025fa9b85e0b93e3677b49be2ae",
+      "duration_seconds": 13.78
+    },
+    {
+      "id": "lesen-buecherbus",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "ac53fef10a276013775b0bbe045741cc89ba9d1bfed003311880dc51be71d8f5",
+      "duration_seconds": 16.08
+    },
+    {
+      "id": "lesen-buecherbus",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "2806fac0f68b761b190bf581ff6069028d49d54d3647c00cb80e6329d205fe63",
+      "duration_seconds": 17.33
+    },
+    {
+      "id": "lesen-buecherbus",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "544ca8680e5b94fb498e7b471788a881c1e6ee7bdfae5782cadbc3da8493e4ff",
+      "duration_seconds": 15.48
+    },
+    {
+      "id": "lesen-regen",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "e5a5cc32353df9bed93c23b385360b6e86261d90ba3f29b78f12a6fe06ceb19f",
+      "duration_seconds": 15.77
+    },
+    {
+      "id": "lesen-regen",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "2555b32156ef8d51d517d7b1284e68b9f445e4baa44220117ee1b1d2fe08ab8d",
+      "duration_seconds": 17.3
+    },
+    {
+      "id": "lesen-regen",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "96a9552f174b205f66c159fb27ea6850f1b01e553a4419ea556e83fc311fb6e1",
+      "duration_seconds": 20.93
+    },
+    {
+      "id": "lesen-regen",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "72022481b773304d893a5dbd7ad78de5bba8f8237658c12e8c929eff7af331b5",
+      "duration_seconds": 17.66
+    },
+    {
+      "id": "lesen-projekttag",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "e5ce793953031c5875a9516a9db7a860d0853cf0d651919ff9b3b1aa34783d94",
+      "duration_seconds": 16.97
+    },
+    {
+      "id": "lesen-projekttag",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "407252d7b233c2bc68b0337274b06ebaff6f3d0fb84d9d9fbc76e0cd482a66fb",
+      "duration_seconds": 17.88
+    },
+    {
+      "id": "lesen-projekttag",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "49a24ed88a066ab1fa1465049f6e3b07f5a57755c5b8efb5402196ffc0cf9982",
+      "duration_seconds": 21.48
+    },
+    {
+      "id": "lesen-projekttag",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "134689a57a773d1b61840de1b125b5e9b83d43cf6b7cf070e27deec4dd396b59",
+      "duration_seconds": 19.7
+    },
+    {
+      "id": "lesen-bruecke",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "6953dcb6f3f08962e98f17ddc1d9b9e0de591f6294fe4212910aba378411d36c",
+      "duration_seconds": 14.18
+    },
+    {
+      "id": "lesen-bruecke",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "c47815f0c2e88c6ee38f6c0dd9ca16620dc452aa8c4debf0a8c73be574192480",
+      "duration_seconds": 16.56
+    },
+    {
+      "id": "lesen-bruecke",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "9006be478ffb611f342c5f5d64e263dcfde4e01d6bc057e1fd6a2cdf005b6cf2",
+      "duration_seconds": 17.74
+    },
+    {
+      "id": "lesen-bruecke",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "d4e9c7930457e8812bba324b8025a96b9b9ef2144847369a07f02e68c6bb439c",
+      "duration_seconds": 16.97
+    },
+    {
+      "id": "lesen-nachricht",
+      "language": "en",
+      "voice": "en-GB-SoniaNeural",
+      "text_sha256": "575ca426a85ab9e4b6e4057a0d53e2ab6ff4adb6b85be761e723f7e1609d6d00",
+      "duration_seconds": 15.14
+    },
+    {
+      "id": "lesen-nachricht",
+      "language": "tr",
+      "voice": "tr-TR-EmelNeural",
+      "text_sha256": "8fd384adee1683ca2122e530eca0f332e3a564399b9939284cc124f480a457da",
+      "duration_seconds": 17.35
+    },
+    {
+      "id": "lesen-nachricht",
+      "language": "ar",
+      "voice": "ar-SA-ZariyahNeural",
+      "text_sha256": "af535d525c0cfefea3f7df2c7cfa1d21373c5501d34feddd711cd03b230172de",
+      "duration_seconds": 19.01
+    },
+    {
+      "id": "lesen-nachricht",
+      "language": "uk",
+      "voice": "uk-UA-PolinaNeural",
+      "text_sha256": "d96114817365ed58c3232ccffb39002260623426c7e4dedd5f4c90cafa6b754f",
+      "duration_seconds": 17.35
+    }
+  ]
+}
