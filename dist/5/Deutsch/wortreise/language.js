@@ -15,7 +15,8 @@ const WortreiseLanguage = (() => {
     if (languages.some(language => language.code === saved)) selected = saved;
   } catch { persistent = false; }
   const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const picker = document.querySelector('#explanation-language');
+  const tools = document.querySelector('#language-tools-template').content.firstElementChild.cloneNode(true);
+  const picker = tools.querySelector('#explanation-language');
   picker.innerHTML = languages.map(language => `<option value="${language.code}" lang="${language.code}">${language.label}</option>`).join('');
   picker.value = selected;
 
@@ -45,9 +46,21 @@ const WortreiseLanguage = (() => {
     try { localStorage.setItem(key, selected); persistent = true; }
     catch { persistent = false; }
     document.querySelectorAll('[data-language-help]').forEach(fill);
-    document.querySelector('#language-status').textContent = selected === 'de'
+    tools.querySelector('#language-status').textContent = selected === 'de'
       ? 'Die zusätzlichen Sprachhilfen sind ausgeblendet.'
       : `Sprachhilfen auf ${languages.find(language => language.code === selected).name}. ${persistent ? 'Auswahl in diesem Browser gespeichert.' : 'Die Auswahl gilt nur für diese Sitzung.'}`;
   });
-  return {panel};
+  function mount() {
+    const speech = document.querySelector('.fips-guide:not(.fips-writing) .fips-speech');
+    if (!speech) return;
+    let heading = speech.querySelector('.fips-heading');
+    if (!heading) {
+      heading = document.createElement('div');
+      heading.className = 'fips-heading';
+      heading.append(speech.querySelector('strong'));
+      speech.prepend(heading);
+    }
+    heading.append(tools);
+  }
+  return {panel, mount};
 })();

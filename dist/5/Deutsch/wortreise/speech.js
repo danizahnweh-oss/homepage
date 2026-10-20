@@ -20,7 +20,7 @@ const WortreiseSpeech = (() => {
  function start(id){
   if(!lessons.some(l=>l.id===id))return;
   stop();const token=sequence;
-  const audio=new Audio('audio/miriam/'+encodeURIComponent(id)+'.mp3');active=audio;
+  const audio=new Audio('audio/miriam/'+encodeURIComponent(id)+'.mp3'+(id==='plural'?'?v=20261017':''));active=audio;
   audio.preload='none';audio.playbackRate=rate;audio.preservesPitch=true;
   const current=()=>token===sequence&&active===audio;
   const fail=()=>{if(!current())return;stop('Die Aufnahme konnte nicht geladen werden. Prüfe deine Internetverbindung und versuche es noch einmal.');};

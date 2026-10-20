@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fips, der Fuchs">
+  <path d="M12 38 22 5 47 29Q60 24 73 29L98 5l10 33c7 19 3 42-10 57-9 10-22 16-38 16S31 105 22 95C9 80 5 57 12 38Z" fill="#db672e" stroke="#8a3c23" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M23 31 25 17 38 32ZM82 32 95 17l2 14Z" fill="#f8b6a0"/>
+  <path d="M13 65q16 11 30 8l17 15 17-15q14 3 30-8c-2 15-9 29-21 37-7 5-16 9-26 9s-19-4-26-9C22 94 15 80 13 65Z" fill="#fff4db"/>
+  <path d="M47 86q13-11 26 0l-13 12Z" fill="#4a2c2a"/>
+  <path d="M60 97v7m0-1q-8 4-14-1m14 1q8 4 14-1" fill="none" stroke="#4a2c2a" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="40" cy="61" rx="4" ry="6" fill="#302827"/><ellipse cx="80" cy="61" rx="4" ry="6" fill="#302827"/>
+  <path d="M31 52q8-5 16-1m26 0q8-4 16 1" fill="none" stroke="#8a3c23" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
