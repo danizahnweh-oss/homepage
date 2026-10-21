@@ -8,7 +8,7 @@ export function studentName(input: string) {
 }
 async function hash(input:string){const digest=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(input));return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");}
 export async function studentAlias(input:string){return "smv-student-"+(await hash("smv-student-v1:"+studentName(input).key)).slice(0,48)+"@students.invalid";}
-const origins=new Set(["https://smv.daniel-zahnweh.de","https://smv-zimmer-buchung.zahnweh.chatgpt.site"]);
+const origins=new Set(["https://daniel-zahnweh.de","https://www.daniel-zahnweh.de","https://smv.daniel-zahnweh.de","https://smv-zimmer-buchung.zahnweh.chatgpt.site"]);
 const json=(value:unknown,status=200)=>Response.json(value,{status,headers:{"Cache-Control":"no-store"}});
 const handler=withSupabase({auth:"publishable"},async(request,ctx)=>{
  if(request.method!=="POST")return json({message:"Methode nicht erlaubt"},405);

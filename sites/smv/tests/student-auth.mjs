@@ -25,6 +25,7 @@ assert.ok((await client.studentAlias('Test A')).split('@')[0].length<=64);
 for(const bad of ['ab','<script>','x@test.invalid','A\u202eB', 'x'.repeat(61)])assert.throws(()=>client.studentName(bad));
 assert.throws(()=>client.validateStudentPassword('short'));client.validateStudentPassword('long-enough-password');
 async function call(body,token,origin='https://smv.daniel-zahnweh.de'){return server.default.fetch(new Request('https://edge.test.invalid',{method:'POST',headers:{origin,...(token?{authorization:'Bearer '+token}:{})},body:JSON.stringify(body)}));}
+for(const origin of ['https://daniel-zahnweh.de','https://www.daniel-zahnweh.de','https://smv.daniel-zahnweh.de']){const response=await call({action:'status'},null,origin);assert.equal(response.status,200);assert.equal(response.headers.get('Access-Control-Allow-Origin'),origin);}
 assert.equal((await call({action:'status'})).status,200);state.schemaMissing=true;assert.equal((await call({action:'status'})).status,503);state={};
 assert.equal((await server.default.fetch(new Request('https://edge.test.invalid',{method:'OPTIONS',headers:{origin:'https://smv.daniel-zahnweh.de'}}))).status,204);
 assert.equal((await call({action:'status'},null,'https://attacker.invalid')).status,403);
