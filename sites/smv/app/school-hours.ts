@@ -17,8 +17,16 @@ export const breaks = [
   { after: 6, start: "13:15", end: "13:30" },
 ] as const;
 
+export const bookingSlots = lessons.flatMap(lesson => {
+  const pause = breaks.find(p => p.after === lesson.number);
+  const slots = [{ ...lesson, label: `${lesson.number}. Stunde`, isBreak: false }];
+  return pause
+    ? [...slots, { number: 0, start: pause.start, end: pause.end,
+        label: `${breaks.indexOf(pause) + 1}. Pause`, isBreak: true }]
+    : slots;
+});
+
 export function consecutiveEndIndices(startIndex: number) {
-  const indices = [startIndex];
-  for (let i = startIndex + 1; i < lessons.length && lessons[i - 1].end === lessons[i].start; i++) indices.push(i);
-  return indices;
+  if (!Number.isInteger(startIndex) || startIndex < 0 || startIndex >= bookingSlots.length) return [];
+  return Array.from({ length: bookingSlots.length - startIndex }, (_, i) => startIndex + i);
 }

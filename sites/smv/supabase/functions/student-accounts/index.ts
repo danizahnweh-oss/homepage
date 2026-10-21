@@ -33,7 +33,7 @@ const handler=withSupabase({auth:"publishable"},async(request,ctx)=>{
   if(profileError){await db.auth.admin.deleteUser(created.user.id);return json({message:"Das Konto konnte nicht angelegt werden. Bitte versuche es erneut."},409);}
   return json({created:true},201);
  }
- if(body.action==="reset_password"){
+ if(body.action==="reset_password"||body.action==="delete_account"){
   const token=request.headers.get("authorization")?.match(/^Bearer (.+)$/i)?.[1];
   if(!token)return json({message:"Bitte als Admin anmelden"},401);
   const {data:userData,error:userError}=await db.auth.getUser(token);
@@ -43,9 +43,14 @@ const handler=withSupabase({auth:"publishable"},async(request,ctx)=>{
   const {data:admins,error:adminError}=await db.from("smv_admins").select("email");
   if(callerError||adminError)return json({message:"Berechtigung konnte nicht geprüft werden"},503);
   if(callerStudent||!(admins??[]).some((a:{email:string})=>a.email.toLowerCase()===user.email!.toLowerCase()))return json({message:"Keine Adminberechtigung"},403);
-  if(typeof body.user_id!=="string"||!/^[0-9a-f-]{36}$/i.test(body.user_id)||typeof body.password!=="string"||body.password.length<10||body.password.length>128)return json({message:"Zielkonto und Passwort mit 10 bis 128 Zeichen angeben"},400);
-  const {data:target,error:targetError}=await db.from("student_accounts").select("user_id").eq("user_id",body.user_id).maybeSingle();
+  if(typeof body.user_id!=="string"||!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(body.user_id)||(body.action==="reset_password"&&(typeof body.password!=="string"||body.password.length<10||body.password.length>128)))return json({message:"Zielkonto und Passwort mit 10 bis 128 Zeichen angeben"},400);
+  const {data:target,error:targetError}=await db.from("student_accounts").select("user_id,login_name").eq("user_id",body.user_id).maybeSingle();
   if(targetError||!target)return json({message:"Schülerkonto nicht gefunden"},404);
+  if(body.action==="delete_account"){
+   if(body.confirm!==true||body.confirm_name!==target.login_name)return json({message:"Zum Löschen den Anmeldenamen vollständig bestätigen."},400);
+   const {error}=await db.auth.admin.deleteUser(target.user_id);
+   return error?json({message:"Das Schülerkonto konnte nicht gelöscht werden. Bitte erneut versuchen."},503):json({deleted:true});
+  }
   const {error}=await db.auth.admin.updateUserById(target.user_id,{password:body.password});
   return error?json({message:"Passwort konnte nicht geändert werden"},503):json({updated:true});
  }

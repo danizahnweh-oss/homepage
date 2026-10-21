@@ -12,10 +12,10 @@ class Query{
  eq(key,value){this.filters[key]=value;return this;}
  limit(){return Promise.resolve({data:[],error:state.schemaMissing?{}:null});}
  insert(row){inserted.push(row);return Promise.resolve({error:state.profileFailure?{}:null});}
- maybeSingle(){return Promise.resolve({data:this.table==='student_accounts'&&[uid.new,uid.student].includes(this.filters.user_id)?{user_id:this.filters.user_id}:null,error:null});}
+ maybeSingle(){return Promise.resolve({data:this.table==='student_accounts'&&[uid.new,uid.student].includes(this.filters.user_id)?{user_id:this.filters.user_id,login_name:"Test A"}:null,error:null});}
  then(ok,bad){return Promise.resolve({data:this.table==='smv_admins'?[{email:'admin@test.invalid'},{email:'student@test.invalid'}]:null,error:null}).then(ok,bad);}
 }
-const db={from:table=>new Query(table),rpc:async()=>({data:!state.throttled,error:null}),auth:{admin:{createUser:async attrs=>{created.push(attrs);return {data:{user:{id:uid.new}},error:null}},deleteUser:async id=>{deleted.push(id);return {error:null}},updateUserById:async(id,attrs)=>{updated.push({id,attrs});return {error:null}}},getUser:async token=>({data:{user:token==='admin-token'?{id:uid.admin,email:'admin@test.invalid',email_confirmed_at:'2026-01-01'}:token==='student-token'?{id:uid.student,email:'student@test.invalid',email_confirmed_at:'2026-01-01'}:null},error:null})}};
+const db={from:table=>new Query(table),rpc:async()=>({data:!state.throttled,error:null}),auth:{admin:{createUser:async attrs=>{created.push(attrs);return {data:{user:{id:uid.new}},error:null}},deleteUser:async id=>{deleted.push(id);return {error:state.deleteFailure?{}:null}},updateUserById:async(id,attrs)=>{updated.push({id,attrs});return {error:null}}},getUser:async token=>({data:{user:token==='admin-token'?{id:uid.admin,email:'admin@test.invalid',email_confirmed_at:'2026-01-01'}:token==='student-token'?{id:uid.student,email:'student@test.invalid',email_confirmed_at:'2026-01-01'}:null},error:null})}};
 globalThis.__studentAuthMock={withSupabase:(options,handler)=>{assert.equal(options.auth,'publishable');return req=>handler(req,{supabaseAdmin:db})}};
 let source=readFileSync('supabase/functions/student-accounts/index.ts','utf8').replace('import { withSupabase } from "npm:@supabase/server@^1";','const {withSupabase}=globalThis.__studentAuthMock;');
 const server=await load(source);
@@ -40,3 +40,14 @@ assert.equal((await call({action:'reset_password',user_id:uid.student,password:'
 assert.equal((await call({action:'reset_password',user_id:uid.admin,password:'long-test-password'},'admin-token')).status,404);assert.equal(updated.length,0);
 assert.equal((await call({action:'reset_password',user_id:uid.student,password:'long-test-password'},'admin-token')).status,200);assert.equal(updated[0].id,uid.student);
 console.log('PASS: Unicode/case/whitespace identity equivalence, identifier length, validation, CORS, readiness, registration throttles, fixed student role, cleanup, authenticated admin-only reset and no admin target reset');
+
+const deleteBody={action:'delete_account',user_id:uid.student,confirm:true,confirm_name:'Test A'};
+for(const [token,status] of [[undefined,401],['forged-token',401],['student-token',403]])assert.equal((await call(deleteBody,token)).status,status);
+assert.equal((await call({...deleteBody,user_id:uid.admin},'admin-token')).status,404);
+assert.equal((await call({...deleteBody,user_id:uid.other},'admin-token')).status,404);
+assert.equal((await call({...deleteBody,confirm:false},'admin-token')).status,400);
+assert.equal((await call({...deleteBody,confirm_name:'Wrong Name'},'admin-token')).status,400);
+assert.equal(deleted.length,1);
+assert.equal((await call(deleteBody,'admin-token')).status,200);assert.equal(deleted.at(-1),uid.student);
+state.deleteFailure=true;assert.equal((await call(deleteBody,'admin-token')).status,503);state={};
+console.log('PASS: admin-only account deletion, no admin/unknown targets, exact name confirmation and surfaced deletion failures');

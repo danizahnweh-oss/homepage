@@ -21,3 +21,8 @@ Die E-Mail-Bestätigung für normale Supabase-Konten (Confirm Email) eingeschalt
 
 ## Änderungen am Datenbestand
 `requester_email` darf für Schülerbuchungen NULL sein. Der Name wird serverseitig aus dem Schülerkonto übernommen. Nur eingetragene Admins oder angelegte Schülerkonten können nach Installation neue Buchungen erstellen. Bereits vorhandene Konten, Buchungen, Admin-E-Mails, SMTP-Secrets und der Benachrichtigungstrigger bleiben erhalten. Löschfristen und Anbieterfreigaben sind weiterhin offen.
+
+## Kontolöschung und Jahresfrist (21.10.2026)
+Admins können ausschließlich Schülerkonten löschen. Die Funktion prüft Admin-Token, vorhandenes Schülerprofil und die exakte Bestätigung des Anmeldenamens. Supabase Auth löscht das Konto; Datenbank-Fremdschlüssel entfernen Profil, Buchungen und zugehörige Benachrichtigungsdatensätze. Mailkopien und Anbieterbackups bleiben separat zu behandeln. Admin-Konten sind kein Ziel dieser Funktion.
+
+`09-pausen-buchbar.sql` erlaubt alle drei Pausen sowie zusammenhängende Zeiten über Pausen hinweg. `10-loeschfrist-ein-jahr.sql` richtet eine tägliche Bereinigung um 02:15 UTC ein: Buchungen ein Jahr nach Terminende, Schülerkonten ein Jahr nach letzter Anmeldung (ohne Anmeldung ab Erstellung). Nur Konten mit SMV-Schülerprofil werden berücksichtigt, eingetragene Admin-Adressen sind zusätzlich ausgenommen. Die Installation führt keine Bereinigung aus.
