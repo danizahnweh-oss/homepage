@@ -28,3 +28,8 @@ WCAG-AA als Umsetzungsziel, semantische Links, sichtbarer Tastaturfokus, mindest
 Vokabeln lernen und spielerisch überprüfen sind für alle drei Klassen eigenständige Ziele mit je einem direkten Link. Lernen ist keine Voraussetzung für Spiele.
 
 Mission Traumschiff ergänzt Wirtschaft & Recht für Klasse 10 unter /10/Kreuzfahrt/: 90 Minuten, Einführung, drei Bordakten, Urteil und Diskussion; gerätelokaler Fortschritt ohne Konten.
+
+## Verbindlicher Anspruch für Lernangebote
+Alle Lernseiten fördern begründetes Urteilen, Transfer und selbstständiges Problemlösen, mit Schwerpunkt auf begründetem Urteilen. Zunächst angeleitete Beispiele, anschließend zunehmend selbstständige komplexe Aufgaben. Kriterienraster und Musterlösungen unterstützen die Selbstprüfung und Überarbeitung. Reine Wissensabfrage ist nur Vorbereitung. Bestätigt am 28.10.2026.
+
+Statistiklabor: Klasse 11 unter /statistiklabor/, verlinkt in Wirtschaft & Recht. Drei Methodenschritte, 17 Umfragemerkmale aus der bereitgestellten Quelle, dokumentierte Destatis-Daten und klar gekennzeichnete Modellexperimente. Offene Texte werden nicht automatisch bewertet; Fortschritt ist Selbsteinschätzung. Speicherung nur im Browser, Textexport.

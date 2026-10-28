@@ -29,3 +29,5 @@ Touch-Korrektur für die gemeldete Pixel-/Chrome-Bedienung: Der Verlust der impl
 
 ## Kartenfächer, 17. Oktober 2026
 Nur die Karten der Fachauswahl erhalten das aufgefächerte Design der Bildvorlage: hochformatige Bildkarten, sanfte Drehung, abgerundete Ecken und dunkle Textflächen. Die vier bestehenden Fachbereiche, Überschrift, Einleitung, Navigation, Seitenfarben und übrige Seitengestaltung bleiben wie zuvor. Pfeile, Tastatur, Wischgesten und reduzierte Bewegung bleiben erhalten. home-fan.css ist ausschließlich auf die Kartenkomponente begrenzt.
+
+Statistiklabor (28.10.2026): eigenständige Methodenwerkstatt für Klasse 11, helle Papierflächen, bestehender Chartreuse-Akzent, dunkelgrüne und blaue Datenreihen. Direkte Stationsnavigation, echte Zahlen zusätzlich als Tabelle, Diagramme mit ausgewiesener Bezugsgröße, keine Dekorationsbilder. Zunächst durchgearbeitetes Beispiel, danach offene Analyse, Gegenpositionen und Forschungsplanung. Selbstprüfung per Kriterienraster; browserlokale Speicherung und Export. Beispielwerte sind ausdrücklich als Modelldaten ausgewiesen.
