@@ -8,7 +8,7 @@ function assessAnswer(id,value){
  const words=(text.toLocaleLowerCase('de-DE').match(/\p{L}{2,}(?:[-’']\p{L}{2,})*/gu)||[]);
  const unique=new Set(words).size;
  const counts={};for(const word of words)counts[word]=(counts[word]||0)+1;
- const repeated=words.length>0&&(Math.max(...Object.values(counts))/words.length>.22||unique<Math.min(20,minWords/2)||unique/words.length<.3);
+ const repeated=words.length>=10&&(Math.max(...Object.values(counts))/words.length>.22||unique<Math.min(20,minWords/2)||unique/words.length<.3);
  const malformed=/(.)\1{5,}/u.test(text)||words.filter(w=>!/[aeiouyäöü]/i.test(w)||w.length>35).length>words.length*.25;
  const letters=(text.match(/\p{L}/gu)||[]).length;
  const ready=words.length>=minWords&&text.length>=minChars&&!repeated&&!malformed&&letters/text.length>.55;
