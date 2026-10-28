@@ -2,3 +2,6 @@
 
 .visual small{color:var(--paper)}
 .bars .bar{min-width:0}.bars .bar b{left:calc(100% + 4px);right:auto;color:var(--ink)}
+
+.answer-status{font-size:14px;color:var(--muted);padding:12px 0}.done-badge{margin-left:auto}.next ul{padding-left:20px;font-size:14px}summary[aria-disabled="true"]{color:var(--muted)}
+@media print{details[data-solution]:not([open])>:not(summary){display:none}}
